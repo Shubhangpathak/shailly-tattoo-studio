@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <h1 class="hero-heading">Dedicated to <span>create</span> exception tattoo in clean, creative space </h1>
+        <button class="btn-primary">Explore Services</button>
+      </div>
+      <div class="hero-video-container">
+        <video class="hero-video" autoplay muted loop playsinline>
+          <source src="/video.mov" type="video/mp4">
+        </video>
+      </div>
+      </div>
+    </section>
+    <section class="cta" id="cta">
+      <div class="cta-content">
+        <h2>Shaillys Tattoo Studio is where your ideas becomes permanent statements of self-expression</h2>
+        <button class="btn-primary">book an appointment</button>
+      </div>
+      <div class="cta-content2">
+        <p>we can make <u>anything</u> happen</p>
+      </div>
+    </section>
+    
+    <section class="about" id="about">
+      <div class="about-container">
+        <h2 class="about-title">Our Story</h2>
+        <div class="about-content">
+          <p class="about-text">
+            we at shailly's tattoo studio we have been making tattoos since 
+            1996, our passion for art and commitment to quality have made us 
+            a trusted haven for those daring enough to express their 
+            individuality.
+          </p>
+          <p class="about-text">
+            Our website is designed to be your first step into a world where 
+            creativity meets precision, offering an effortless way to book your 
+            appointment and explore our vibrant portfolio.
+          </p>
+          <p class="about-text">
+            Whether you're in <b> Raipur </b>or <b>Mumbai</b>, our digital space is a 
+            seamless blend of style, trust, and a sprinkle of that rebellious 
+            charm that only true art can inspire.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="preview" id="preview">
+      <div class="preview-container">
+        <h3>
+          We sit at <span>the intersection</span> of creative and performance.
+        </h3>
+        <button class="btn-primary"> View Portfolio</button>
+      </div>
+      <div class="preview-img">
+        <img src="/images/new.png" alt="client picture">
+        <img src="/images/new2.png" alt="client picture">
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="gallery-header">
+        <h3 class="gallery-title">Real Art. <span>Real Skin.</span></h3>
+        <a href="#" class="btn-primary">
+          Explore More >>
+        </a>
+        <!-- <a href="#" class="explore-more">
+          Explore More
+          <img src="/icons/bx-chevron-right.svg" alt="Explore">
+        </a> -->
+      </div>
+      <button class="scroll-btn scroll-left" onclick="scrollGallery(-1)" style="display: none">
+        <img src="/icons/bx-chevron-right.svg" style="transform: rotate(180deg);" alt="Left">
+      </button>
+      
+      <div class="gallery-container" id="gallery">
+        <img class="gallery-image" src="/images/img1.png" alt="Tattoo 1">
+        <img class="gallery-image" src="/images/img2.png" alt="Tattoo 2">
+        <img class="gallery-image" src="/images/img4.png" alt="Tattoo 3">
+        <img class="gallery-image" src="/images/img5.png" alt="Tattoo 4">
+        <img class="gallery-image" src="/images/img6.png" alt="Tattoo 4">
+        <img class="gallery-image" src="/images/img7.png" alt="Tattoo 4">
+        <img class="gallery-image" src="/images/img8.png" alt="Tattoo 4">
+        <img class="gallery-image" src="/images/img9.png" alt="Tattoo 4">
+      </div>
+      <button class="scroll-btn scroll-right" onclick="scrollGallery(1)">
+        <img src="/icons/bx-chevron-right.svg" alt="Right">
+      </button>
+      <div class="gallery-button-for-phone">
+        
+        <button class="explore-btn">Explore All</button>
+      </div>
+    </section>
+
+    <section class="pricing-container">
+      <div class="preview-container">
+        <h3>
+          Transparent <span>pricing</span> tailored to your unique tattoo project
+        </h3>
+        <button class="btn-primary"> Get Quote</button>
+      </div>
+
+      <div class="pricing-grid">
+          <!-- Small Tattoos Card -->
+          <div class="pricing-card">
+              <h3 class="card-title">Small & Simple Tattoos</h3>
+              <p class="pricing-type">Size based</p>
+              <p class="price">₹1000 - ₹1500</p>
+              <p class="price-unit">per square inch</p>
+              <p class="description">Ideal for minimalist designs and first-time tattoos, offering a perfect balance of simplicity and elegance, making it an excellent choice for any tattoo enthusiast.</p>
+              
+              <div class="price-breakdown">
+                  <div class="price-item">
+                      <span>Standard Detail</span>
+                      <span>₹1000 – 1200</span>
+                  </div>
+                  <div class="price-item">
+                      <span>Fine Detail</span>
+                      <span>₹1300 – 1500</span>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Medium Tattoos Card -->
+          <div class="pricing-card">
+              <h3 class="card-title">Medium sized Tattoos</h3>
+              <p class="pricing-type">Time based</p>
+              <p class="price">₹4,000 - ₹8,000</p>
+              <p class="price-unit">per hour</p>
+              <p class="description">The cost of medium-sized tattoos that take more than 3 hours to complete varies based on the artist's level of skill and the intricacy of the design.</p>
+              
+              <div class="price-breakdown">
+                  <div class="price-item">
+                      <span>Junior Artist</span>
+                      <span>₹4,000 – 5,500</span>
+                  </div>
+                  <div class="price-item">
+                      <span>Senior Artist</span>
+                      <span>₹6,000 – 8,000</span>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Large Tattoos Card -->
+          <div class="pricing-card">
+              <h3 class="card-title">Large & detailed Tattoos</h3>
+              <p class="pricing-type">Session based</p>
+              <p class="price">₹24,000 - ₹1,80,000</p>
+              <p class="price-unit">per session</p>
+              <p class="description">Larger tattoos requiring 6+ hours of work. Charged per full-day session (6-8 hours). Rates vary based on the design's complexity and the artist's expertise.</p>
+              
+              <div class="price-breakdown">
+                  <div class="price-item">
+                      <span>Half Day</span>
+                      <span>₹24,000 – 60,000</span>
+                  </div>
+                  <div class="price-item">
+                      <span>Full Day</span>
+                      <span>₹65,000 – 1,80,000</span>
+                  </div>
+                  <div class="price-item">
+                      <span>Premium Detail</span>
+                      <span>₹1500 - 2000 per sq. inch</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <!-- <div class="pricing-details">
+          <p>Final pricing depends on the size, placement, and level of detail in your design. Contact us for a personalized consultation and quote. We're dedicated to making your tattoo vision a reality while ensuring quality and safety.</p>
+      </div> -->
+  </section>
+
+  <section class="testimonials-section">
+    <div class="section-title">
+        <h2>Client Testimonials</h2>
+    </div>
+    <div class="testimonials-container">
+        <div class="testimonial-card">
+            <p class="testimonial-text">"Our tattoo artist brought my vision to life with incredible skill and artistry. The attention to detail in my custom design was amazing. From the initial consultation to the final session, the experience was professional, comfortable, and exceeded my expectations."</p>
+            <div class="client-info">
+                <span class="client-name">Mark Johnson</span>
+                <span class="client-detail">CEO - Ink Culture</span>
+            </div>
+        </div>
+        
+        <div class="testimonial-card">
+            <p class="testimonial-text">"This tattoo studio has been my go-to for years. They created a stunning sleeve that tells my personal story through carefully crafted imagery. Their collaborative approach to design ensures each piece is meaningful and unique. The clean, professional environment makes every session enjoyable."</p>
+            <div class="client-info">
+                <span class="client-name">Chris Taylor</span>
+                <span class="client-detail">CEO - Black Ink Collective</span>
+            </div>
+        </div>
+        
+        <div class="testimonial-card">
+            <p class="testimonial-text">"This studio helped create my meaningful memorial tattoo with sensitivity and artistic excellence. The attention to symbolism and fine line work resulted in a beautiful tribute. Their talent for transforming concepts into wearable art is remarkable, and their aftercare guidance ensured perfect healing."</p>
+            <div class="client-info">
+                <span class="client-name">Lo Bosworth</span>
+                <span class="client-detail">Chairwoman - Eternal Ink Society</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <section class="faq-section">
+    <div class="faq-container">
+      <div class="faq-content-wrapper">
+        <div class="faq-header">
+          <h2 class="faq-title">Frequently <br><span>Asked Questions</span></h2>
+          <p class="faq-subtitle">Here are some frequently asked questions with answers to clarify doubts.</p>
+        </div>
+        
+        <div class="faq-items">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What is the tattoo process like?</h3>
+            <div class="faq-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>Our tattoo process begins with a consultation to discuss your design ideas, placement, and size. We then create a custom design based on your input. On the day of your appointment, we'll prepare the area, transfer the design, and begin tattooing. Throughout the process, we prioritize your comfort and ensure a sterile environment.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How do I care for my new tattoo?</h3>
+            <div class="faq-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>After getting your tattoo, keep it covered for the first few hours. Gently wash with mild soap, pat dry, and apply a thin layer of recommended ointment. Avoid direct sunlight, swimming, and soaking for at least 2 weeks. Don't pick at scabs or scratch the area. Follow our detailed aftercare instructions for best results.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Can I get a tattoo over a scar?</h3>
+            <div class="faq-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, in many cases tattoos can be done over scars. However, it depends on the scar's age, type, and condition. Scars should be at least 1-2 years old and fully healed. Our artists will assess your specific situation during a consultation and recommend the best approach for your scar coverage tattoo.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>How much does a tattoo cost?</h3>
+            <div class="faq-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>Tattoo pricing varies based on size, detail, placement, and the artist's experience. Small tattoos typically range from ₹1,000-₹3,000, medium tattoos from ₹4,000-₹8,000 per hour, and large pieces can cost ₹24,000-₹1,80,000 for full sessions. We provide detailed pricing information in our pricing section above.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Do tattoos hurt?</h3>
+            <div class="faq-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </div>
+          <div class="faq-answer">
+            <p>Pain levels vary from person to person and depend on the tattoo's location. Areas with thin skin and less fat (like ribs, spine, ankles) tend to be more sensitive. Most clients describe the sensation as uncomfortable but manageable. Our artists work to make the experience as comfortable as possible.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="findus container section">
+    <h2 class="findus-title">Find us</h2>
+    <div class="findus-img-container">
+      <div class="find-img1">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d432.89440519663634!2d72.82932013641393!3d19.13878271524343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63d47cd2ff7%3A0x5787e96dad2abc73!2sShailly&#39;s%20Tattoo%20Studio!5e0!3m2!1sen!2sin!4v1732447301210!5m2!1sen!2sin" width="467" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h3 class="find-subhead">Mumbai</h3>
+        <button class="find-btn" onclick="window.location='https://maps.app.goo.gl/kVwbSr3VnmfuCZke6'" target="_blank"><img src="/icons/bx-map.svg" alt="Map Icon" class="btn-icon" />Get direction</button>
+      </div>
+      <div class="find-img2">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.45437643554!2d81.65973407503802!3d21.253474380452605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dd694a5d2581%3A0x288440e0cb58cfff!2z8J2XpvCdl7XwnZeu8J2XtvCdl7nwnZe58J2YhifwnZiAIPCdl6fwnZeu8J2YgfCdmIHwnZe88J2XvCDwnZiA8J2YgfCdmILwnZex8J2XtvCdl7w!5e0!3m2!1sen!2sin!4v1732446905924!5m2!1sen!2sin" width="467" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h3 class="find-subhead">Raipur</h3>
+        <button class="find-btn" onclick="window.location='https://maps.app.goo.gl/HEmic6C7RjQN52386'" target="_blank"><img src="/icons/bx-map.svg" alt="Map Icon" class="btn-icon" />Get direction</button>
+      </div>
+    </div>
+  </section>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+
+.logo-text img{
+  width: 120px;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5em 5%;
+  position: sticky;
+  border-bottom: 1.5px solid #000;
+  z-index: 1000;
+}
+nav button a{
+    text-decoration: none;
+    color: var(--clr-light);
+}
+.menu{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.menu a {
+    position: relative;
+    text-decoration: none;
+    /* font-size: 14px; */
+    color: var(--clr-dark);
+    /* font-family: 'Public Sans', sans-serif; */
+    border: solid 1px var(--clr-dark);
+    border-radius: 26px;
+    padding: 12px 40px;
+}
+
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.btn{
+    background-color: var(--clr-dark);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.btn a{
+    color: var(--clr-light);
+}
+
+/* for phone  */
+.menu-bar{
+    align-items: flex-end;
+    width: 35px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--clr-dark);
+    overflow: hidden;
+    z-index: 100;
+    transition: height 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.mobile-menu-overlay.active {
+    height: 100%;
+}
+
+.mobile-menu-content {
+    padding: 2rem;
+    width: 100%;
+    color: white;
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.mobile-menu-header img {
+    width: 140px;
+    filter: invert(1);
+}
+
+.close-menu {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.mobile-menu-links a {
+    color: white;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    font-family: 'Arimo', sans-serif;
+}
+
+.mobile-menu-links a:hover {
+    transform: translateX(10px);
+}
+
+.mobile-menu-links .get-in-touch-mobile {
+    display: inline-block;
+    background-color: white;
+    color: var(--clr-dark);
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-top: 1rem;
+    text-align: center;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 600;
+}
+
+.mobile-menu-links .get-in-touch-mobile:hover {
+    background-color: #ccc;
+    transform: none;
+}
+
+@media (max-width: 768px) {
+    nav{
+        padding: 5px .5rem;
+    }
+    .menu{
+        display: none;
+    }
+    .menu-bar{
+        display: block;
+    }
+    .logo-text img {
+        width: 120px;
+    }
+    .hide{
+        display: none;
+    }
+}

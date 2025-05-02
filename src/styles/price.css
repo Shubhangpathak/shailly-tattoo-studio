@@ -1,0 +1,112 @@
+/* Pricing Section */
+
+.pricing-container {
+    padding: clamp(4rem, 8vh, 8rem) clamp(1.5rem, 5vw, 4rem); /* Matches gallery-section */
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 14px;
+    box-sizing: border-box;
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.pricing-header h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.pricing-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--clr-dark, #222);
+    font-weight: 700;
+} 
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 8px;
+}
+
+/* Pricing Card */
+
+.pricing-card {
+    background: #fff;
+    padding: 40px 30px;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px dashed #000000;
+    color: var(--clr-dark, #222);
+    transition: box-shadow 0.2s;
+}
+.pricing-card:hover {
+    box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    color: var(--clr-dark, #222);
+} 
+.pricing-type {
+    color: var(--clr-grey-600, #888);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--clr-accent, #c0392b);
+} 
+.price-unit {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: var(--clr-grey-600, #888);
+}
+
+.description {
+    color: var(--clr-grey-600, #666);
+    line-height: 1.6;
+    font-size: 1rem;
+} 
+.pricing-details {
+    margin-top: 40px;
+    background: #f8f8f8;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+}
+.pricing-details p {
+    text-align: center;
+    color: var(--clr-grey-600, #666);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* Price Breakdown */
+
+.price-breakdown {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e5e5;
+    color: var(--clr-dark, #222);
+}
+.price-item:last-child {
+    border-bottom: none;
+}

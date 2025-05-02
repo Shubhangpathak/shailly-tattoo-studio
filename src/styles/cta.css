@@ -1,0 +1,19 @@
+.cta{
+    background-color: var(--clr-blue);
+    color: var(--clr-light);
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.cta-content{
+    width: 60%;
+}
+.cta-content h2{
+    font-size: 40px;
+}
+.cta-content2{
+    margin-top: 250px;
+    align-items: flex-end;
+}

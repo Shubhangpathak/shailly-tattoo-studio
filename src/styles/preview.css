@@ -1,0 +1,26 @@
+.preview{
+    
+}
+.preview-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.preview-container button{
+    margin-top: 22px;
+    height: 50px;
+}
+.preview-container h3{
+    font-size: 46px;
+    
+    width: 60%;
+}
+.preview-img{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+.preview-img img{
+    width: 48%;
+    /* height: 800px; */
+}
