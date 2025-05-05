@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function initAnimations() {
   // Add reveal class to sections for initial state
-  document.querySelectorAll('.hero, .cta, .about, .preview, .pricing-container, .gallery-section, .testimonials-section, .faq-section, .findus, .stats-section, .footer').forEach(section => {
+  document.querySelectorAll('.hero, .about, .preview, .pricing-container, .gallery-section, .testimonials-section, .faq-section, .findus, .stats-section, .footer').forEach(section => {
     section.classList.add('reveal');
   });
   

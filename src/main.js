@@ -15,6 +15,7 @@ import './styles/footer.css'
 import './styles/responsive.css'
 import './review.js'
 import './style.css'
+import './utiles.css'
 import { initAnimations } from './animations.js'
 
 document.querySelector('#app').innerHTML = `
@@ -22,8 +23,8 @@ document.querySelector('#app').innerHTML = `
       <div class="logo-text"><img src="/logo.png" alt=""></div>
       <div class="menu">
         <a href="#about-section">Gallery</a>
-        <a href="#about-section">About</a>
-        <a href="#about-section">Location</a>
+        <a href="#about">About</a>
+        <a href="#findus">Location</a>
         <a href="#price-section" class="clr-light">Book Now</a>
         </div>
       <div class="menu-bar" id="menu-toggle"><img src="/icons/bx-menu.svg" alt=""></div>

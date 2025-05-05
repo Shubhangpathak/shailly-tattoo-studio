@@ -6,17 +6,17 @@
   width: 100%;
   min-height: 75vh;
   box-sizing: border-box;
-  /* background: var(--clr-light); */
   text-align: center;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  justify-content: space-between;
+  padding: clamp(4rem, 8vh, 8rem) clamp(0.5rem, 2vw, 2rem);
 }
 
 .hero-video-container {
   flex: 1 1 0;
   display: flex;
-  align-items: stretch;
-  justify-content: stretch;
+  /* align-items: stretch;
+  justify-content: stretch; */
   min-width: 0;
   min-height: 0;
   /* height: 100vh; */
@@ -39,7 +39,7 @@
   justify-content: center;
   text-align: center;
   gap: 28px;
-  padding: 0 2vw;
+  /* padding: 0 2vw; */
   min-width: 0;
 }
 

@@ -1,12 +1,12 @@
 .stats-section {
   background-color: #000;
   color: #fff;
-  padding: 60px 20px;
+  /* padding: 60px 20px; */
   width: 100%;
 }
 
 .stats-container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   display: flex;
   justify-content: space-between;

@@ -5,19 +5,6 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <style>
-      /* Hide elements initially */
-      .reveal {
-        opacity: 0;
-        visibility: hidden;
-      }
-      
-      /* For staggered elements */
-      .reveal-item {
-        opacity: 0;
-        visibility: hidden;
-      }
-    </style>
   </head>
   <body>
     <div id="app"></div>
@@ -30,7 +17,6 @@
         <video class="hero-video" autoplay muted loop playsinline>
           <source src="/video.mp4" type="video/mp4">
         </video>
-      </div>
       </div>
     </section>
     <section class="cta" id="cta">
@@ -85,7 +71,7 @@
         <h3>
           We sit at <span>the intersection</span> of creative and performance.
         </h3>
-        <button class="btn-primary"> View Portfolio</button>
+        <button class="btn-primary"> View Gallery</button>
       </div>
       <!-- <div class="gallery-header">
         <h3 class="gallery-title">Real Art. <span>Real Skin.</span></h3>
@@ -102,10 +88,12 @@
       </button> -->
       
       <div class="gallery-container" id="gallery">
+        <img class="gallery-image" src="/images/new.png" alt="new Tattoo 1">
+        <img class="gallery-image" src="/images/new2.png" alt="new Tattoo 1">
+        <img class="gallery-image" src="/images/img5.png" alt="Tattoo 4">
         <img class="gallery-image" src="/images/img1.png" alt="Tattoo 1">
         <img class="gallery-image" src="/images/img2.png" alt="Tattoo 2">
         <img class="gallery-image" src="/images/img4.png" alt="Tattoo 3">
-        <img class="gallery-image" src="/images/img5.png" alt="Tattoo 4">
         <img class="gallery-image" src="/images/img6.png" alt="Tattoo 4">
         <img class="gallery-image" src="/images/img7.png" alt="Tattoo 4">
         <img class="gallery-image" src="/images/img8.png" alt="Tattoo 4">
@@ -124,13 +112,13 @@
       <div class="stats-container">
         <div class="stat-item">
           <span class="stat-icon">★</span>
-          <h2 class="stat-number">5000+</h2>
+          <h2 class="stat-number">24000+</h2>
           <p class="stat-description">unique tattoos created</p>
         </div>
         
         <div class="stat-item">
           <span class="stat-icon">★</span>
-          <h2 class="stat-number">19+</h2>
+          <h2 class="stat-number">19</h2>
           <p class="stat-description">years of experience</p>
         </div>
         
@@ -236,9 +224,6 @@
   </section>
 
   <section class="testimonials-section">
-    <div class="section-title">
-        <h2>Client Testimonials</h2>
-    </div>
     <div class="testimonials-container">
         <div class="reviews" id="reviews">
             <div class="review-track">
@@ -393,15 +378,15 @@
     </div>
   </section>
 
-  <section class="findus container section">
+  <section class="findus container section" id="findus">
     <h2 class="findus-title">Find us</h2>
     <div class="findus-img-container">
       <div class="find-img1">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d432.89440519663634!2d72.82932013641393!3d19.13878271524343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63d47cd2ff7%3A0x5787e96dad2abc73!2sShailly&#39;s%20Tattoo%20Studio!5e0!3m2!1sen!2sin!4v1732447301210!5m2!1sen!2sin" width="467" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <h3 class="find-subhead">Mumbai</h3>
         <div class="location-contact-info">
-          <p class="location-address">Shop 102, 1st Floor, Shiv Shopping Centre, Goregaon West, Mumbai - 400067</p>
-          <p class="location-phone"><img src="/icons/bx-phone.svg" alt="Phone Icon" class="info-icon" /> +91 9988776655</p>
+          <p class="location-address">shop no 5, wellington building, Shastri Nagar Lane 2, Shastri Nagar, Andheri West, Mumbai, Maharashtra 400053</p>
+          <p class="location-phone"><img src="/icons/bx-phone.svg" alt="Phone Icon" class="info-icon" /> +91 8962163217</p>
         </div>
         <button class="find-btn" onclick="window.location='https://maps.app.goo.gl/kVwbSr3VnmfuCZke6'" target="_blank"><img src="/icons/bx-map.svg" alt="Map Icon" class="btn-icon" />Get direction</button>
       </div>
@@ -409,8 +394,9 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.45437643554!2d81.65973407503802!3d21.253474380452605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dd694a5d2581%3A0x288440e0cb58cfff!2z8J2XpvCdl7XwnZeu8J2XtvCdl7nwnZe58J2YhifwnZiAIPCdl6fwnZeu8J2YgfCdmIHwnZe88J2XvCDwnZiA8J2YgfCdmILwnZex8J2XtvCdl7w!5e0!3m2!1sen!2sin!4v1732446905924!5m2!1sen!2sin" width="467" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <h3 class="find-subhead">Raipur</h3>
         <div class="location-contact-info">
-          <p class="location-address">75-A, Jacaranda Marg, Shyam Nagar, Raipur - 492001</p>
-          <p class="location-phone"><img src="/icons/bx-phone.svg" alt="Phone Icon" class="info-icon" /> +91 9876543210</p>
+          <p class="location-address">
+            shop no117 1st floor, studio apratment, Sector 1, Shankar Nagar, Raipur, Chhattisgarh 492007</p>
+          <p class="location-phone"><img src="/icons/bx-phone.svg" alt="Phone Icon" class="info-icon" /> +91 9826198127</p>
         </div>
         <button class="find-btn" onclick="window.location='https://maps.app.goo.gl/HEmic6C7RjQN52386'" target="_blank"><img src="/icons/bx-map.svg" alt="Map Icon" class="btn-icon" />Get direction</button>
       </div>
@@ -441,9 +427,9 @@
         <div class="footer-contact">
           <h3>Contact Us <span class="star-icon">★</span></h3>
           <ul>
-            <li><a href="tel:+919988776655">Mumbai: +91 9988776655</a></li>
-            <li><a href="tel:+919876543210">Raipur: +91 9876543210</a></li>
-            <li><a href="mailto:info@shaillystattoo.com">info@shaillystattoo.com</a></li>
+            <li><a href="tel:+919988776655">Mumbai: +91 8962163217</a></li>
+            <li><a href="tel:+919876543210">Raipur: +91 9826198127</a></li>
+            <li><a href="mailto:shaillystatttoo@gmail.com">shaillystatttoo@gmail.com</a></li>
           </ul>
         </div>
         
@@ -469,6 +455,22 @@
       </div>
     </div>
   </footer>
+
+  <div class="sticky-widgets">
+    <a href="https://g.co/kgs/sLNZNzc" target="_blank" class="widget google-widget">
+        <svg class="widget-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81z"/>
+        </svg>
+        <div class="rating">4.8</div>
+        <small>Reviews</small>
+    </a>
+
+    <a href="https://wa.me/9193999 51345" target="_blank" class="widget whatsapp-widget">
+        <svg class="widget-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+</div>
 
     <script type="module" src="/src/main.js"></script>
   </body>

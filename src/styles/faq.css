@@ -1,5 +1,4 @@
 .faq-section {
-    padding: clamp(4rem, 8vh, 8rem) clamp(0.5rem, 2vw, 2rem);
     background-color: #fff;
 }
 
@@ -12,13 +11,13 @@
 .faq-content-wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 3rem;
+    gap: 10rem;
     align-items: flex-start;
 }
 
 .faq-header {
     text-align: left;
-    
+    margin-left: 0%;
     top: 2rem;
 }
 

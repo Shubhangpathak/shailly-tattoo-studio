@@ -1,8 +1,7 @@
 /* Testimonials Section */
 
 .testimonials-section {
-    padding: clamp(4rem, 8vh, 8rem) clamp(0.5rem, 2vw, 2rem);
-    background-color: #5A59EC;
+    background-color: var(--clr-blue);
     max-width: 100%;
     margin: 0 auto;
     overflow: hidden;
@@ -29,9 +28,9 @@
 .testimonials-container {
     display: flex;
     justify-content: center;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
-    padding: 20px 0;
+    /* padding: 20px 0; */
     overflow: hidden;
 }
 
@@ -39,7 +38,7 @@
 .reviews {
     width: 100%;
     overflow: hidden;
-    max-width: 1400px;
+    /* max-width: 1400px; */
     margin: 0 auto;
     position: relative;
 }
@@ -59,10 +58,10 @@
         transform: translateX(calc(-410px * 6)); /* Card width + gap × number of original cards */
     }
 }
-
+/* 
 .review-track:hover {
     animation-play-state: paused;
-}
+} */
 
 /* Review Card (previously Testimonial Card) */
 .review-card {

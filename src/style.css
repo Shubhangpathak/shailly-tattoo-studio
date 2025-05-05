@@ -32,6 +32,9 @@
   --glass-bg: rgba(255, 255, 255, 0.1);
   --glass-border: rgba(255, 255, 255, 0.2);
 }
+html{
+  scroll-behavior:smooth;
+}
 
 /* Base font styles */
 
@@ -72,4 +75,10 @@ img{
   border-radius: 26px;
   padding: 14px 50px;
   cursor: pointer;
+}
+.about-container{
+  padding: 0%;
+}
+.hero{
+  padding:  clamp(4rem, 8vh, 8rem) clamp(0.5rem, 2vw, 2rem);
 }

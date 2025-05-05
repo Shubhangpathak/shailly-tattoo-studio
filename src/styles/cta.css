@@ -5,7 +5,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: clamp(4rem, 8vh, 8rem) clamp(0.5rem, 2vw, 2rem);
 }
 .cta-content{
     width: 60%;

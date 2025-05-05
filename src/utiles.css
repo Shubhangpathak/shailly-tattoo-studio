@@ -1,0 +1,59 @@
+
+.sticky-widgets {
+    position: fixed;
+    right: 20px; /* reduced from 20px */
+    bottom: 20px; /* reduced from 20px */
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* reduced from 10px */
+  }
+  
+  .widget {
+    background: white;
+    padding: 8px; /* reduced from 12px */
+    border-radius: 8px; /* reduced from 12px */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+    width: 70px; /* reduced from 90px */
+  }
+  
+  .widget-icon {
+    width: 30px; /* reduced from 40px */
+    height: 30px; /* reduced from 40px */
+    margin-bottom: 6px; /* reduced from 8px */
+  }
+  
+  .rating {
+    font-size: 20px; /* reduced from 24px */
+    font-weight: bold;
+    color: #333;
+  }
+  .whatsapp-widget{
+    background: #25d366;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+    width: 70px;
+  }
+  @media (max-width: 768px) {
+    .sticky-widgets{
+      display: none;
+    }
+  }
+  .mobile-menu img {
+    width: 32px;
+    height: 32px;
+  }
+  
