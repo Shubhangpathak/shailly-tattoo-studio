@@ -5,19 +5,25 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    
+    <!-- Preload custom fonts to avoid slow network warnings -->
+    <link rel="preload" href="/fonts/NeueMontreal-Regular.otf" as="font" type="font/otf" crossorigin>
+    <link rel="preload" href="/fonts/NeueMontreal-Medium.otf" as="font" type="font/otf" crossorigin>
+    <link rel="preload" href="/fonts/NeueMontreal-Bold.otf" as="font" type="font/otf" crossorigin>
   </head>
   <body>
     <div id="app"></div>
     <section class="hero" id="hero">
       <div class="hero-content">
         <h1 class="hero-heading">Dedicated to <span>create</span> exception tattoo in clean, creative space </h1>
-        <button class="btn-primary">book an appointment</button>
+        <button class="btn-primary main-hero-btn">book an appointment</button>
       </div>
       <div class="hero-video-container">
         <video class="hero-video" autoplay muted loop playsinline>
           <source src="/video.mp4" type="video/mp4">
         </video>
       </div>
+      <button class="btn-primary hero-phone-btn">book an appointment</button>
     </section>
     <section class="cta" id="cta">
       <div class="cta-content">
@@ -112,7 +118,7 @@
       <div class="stats-container">
         <div class="stat-item">
           <span class="stat-icon">★</span>
-          <h2 class="stat-number">24000+</h2>
+          <h2 class="stat-number">24000</h2>
           <p class="stat-description">unique tattoos created</p>
         </div>
         

@@ -5,6 +5,17 @@
   --heading-scale: 1;
 }
 
+/* Button visibility for different screen sizes */
+.main-hero-btn {
+  display: none; /* Hide on mobile by default */
+}
+
+.hero-phone-btn {
+  display: block; /* Show on mobile by default */
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
 /* Typography scaling */
 
 h1 {
@@ -107,6 +118,15 @@ h6 {
 @media (min-width: 768px) {
   :root {
     --heading-scale: 1.3;
+  }
+  
+  /* Show/hide appropriate buttons */
+  .main-hero-btn {
+    display: block; /* Show on tablet and above */
+  }
+  
+  .hero-phone-btn {
+    display: none; /* Hide on tablet and above */
   }
   
   .hero {

@@ -118,3 +118,58 @@
   justify-content: space-between;
   width: 100%;
 }
+
+.main-hero-btn {
+  display: none !important;
+}
+.hero-phone-btn {
+  display: block !important;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .main-hero-btn {
+    display: block !important;
+  }
+  .hero-phone-btn {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  .hero-video-container {
+    min-height: 300px !important;
+    height: 50vh !important;
+  }
+  
+  .hero-video {
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+  
+  .hero {
+    min-height: 85vh !important;
+  }
+  
+  .gallery-image {
+    min-height: 420px !important;
+    height: 70vh !important;
+    max-height: 80vh !important;
+  }
+  
+  .gallery-container {
+    padding: 0 !important;
+    margin-top: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-video-container {
+    min-height: 350px !important;
+    height: 40vh !important;
+  }
+  
+  .gallery-image {
+    min-height: 380px !important;
+    height: 65vh !important;
+  }
+}

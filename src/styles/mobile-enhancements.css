@@ -1,0 +1,47 @@
+/* Mobile enhancements for video and gallery */
+
+/* Default for mobile devices */
+@media (max-width: 767px) {
+  /* Increase hero video container height */
+  .hero-video-container {
+    min-height: 400px;
+    height: 60vh;
+  }
+  
+  /* Ensure the video takes up full height */
+  .hero-video {
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Adjust hero section height */
+  .hero {
+    min-height: 85vh;
+  }
+  
+  /* Increase gallery image height */
+  .gallery-image {
+    min-height: 420px;
+    height: 70vh !important;
+    max-height: 80vh !important;
+  }
+  
+  /* Adjust gallery container */
+  .gallery-container {
+    padding: 0;
+    margin-top: 20px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .hero-video-container {
+    min-height: 350px;
+    height: 55vh;
+  }
+  
+  .gallery-image {
+    min-height: 380px;
+    height: 65vh !important;
+  }
+} 
