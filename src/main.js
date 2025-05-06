@@ -23,7 +23,7 @@ document.querySelector('#app').innerHTML = `
   <nav>
       <div class="logo-text"><img src="/logo.png" alt=""></div>
       <div class="menu">
-        <a href="#about-section">Gallery</a>
+        <a href="gallery.html">Gallery</a>
         <a href="#about">About</a>
         <a href="#findus">Location</a>
         <a href="#price-section" class="clr-light">Book Now</a>
