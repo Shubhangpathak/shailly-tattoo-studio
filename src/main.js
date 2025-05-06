@@ -16,6 +16,7 @@ import './styles/responsive.css'
 import './review.js'
 import './style.css'
 import './utiles.css'
+import './styles/gallerypage.css'
 import { initAnimations } from './animations.js'
 
 document.querySelector('#app').innerHTML = `

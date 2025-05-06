@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery - Shailly's Tattoo Studio</title>
+  <link rel="stylesheet" href="/src/styles/gallerypage.css">
+
+</head>
+<body>
+  <div id="app"></div>
+  
+  <section class="gallery-page">
+    <div class="search-container">
+      <input type="text" id="gallery-search" placeholder="Search designs...">
+      <button class="search-btn">Search</button>
+    </div>
+    
+    <div class="gallery-filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="minimal">Minimal</button>
+      <!-- <button class="filter-btn" data-filter="colorful">Colorful</button> -->
+      <button class="filter-btn" data-filter="portraits">Portraits</button>
+      <button class="filter-btn" data-filter="traditional">Traditional</button>
+    </div>
+    
+    <div class="gallery-grid">
+      <div class="gallery-item" data-category="minimal">
+        <img src="/images/img1.png" alt="Tattoo Design">
+      </div>
+      <div class="gallery-item" data-category="colorful">
+        <img src="/images/img2.png" alt="Tattoo Design">
+      </div>
+      <div class="gallery-item" data-category="traditional">
+        <img src="/images/img4.png" alt="Tattoo Design">
+      </div>
+      <div class="gallery-item" data-category="portraits">
+        <img src="/images/img5.png" alt="Tattoo Design">
+      </div>
+      <div class="gallery-item" data-category="minimal">
+        <img src="/images/img6.png" alt="Tattoo Design">
+      </div>
+      <div class="gallery-item" data-category="colorful">
+        <img src="/images/img7.png" alt="Tattoo Design">
+      </div>
+      <div class="gallery-item" data-category="portraits">
+        <img src="/images/img8.png" alt="Tattoo Design">
+      </div>
+      <div class="gallery-item" data-category="traditional">
+        <img src="/images/img9.png" alt="Tattoo Design">
+      </div>
+      <div class="gallery-item" data-category="minimal">
+        <img src="/images/img10.png" alt="Tattoo Design">
+      </div>
+      <div class="gallery-item" data-category="colorful">
+        <img src="/images/img11.png" alt="Tattoo Design">
+      </div>
+      <div class="gallery-item" data-category="traditional">
+        <img src="/images/new.png" alt="Tattoo Design">
+      </div>
+      <div class="gallery-item" data-category="minimal">
+        <img src="/images/new2.png" alt="Tattoo Design">
+      </div>
+    </div>
+  </section>
+  
+  <!-- Image Preview Modal -->
+  <div class="gallery-preview-modal" id="gallery-preview">
+    <div class="preview-modal-content">
+      <span class="close-preview">&times;</span>
+      <div class="preview-image-container">
+        <img id="preview-image" src="" alt="Tattoo Preview">
+        <button class="preview-nav prev-btn">
+          <img src="/icons/arrow.svg" alt="Previous">
+        </button>
+        <button class="preview-nav next-btn">
+          <img src="/icons/arrow.svg" alt="Next">
+        </button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

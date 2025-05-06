@@ -1,0 +1,256 @@
+/* Gallery Page Styles */
+.gallery-page {
+  padding: clamp(2rem, 5vh, 5rem) clamp(0.5rem, 2vw, 2rem);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  max-width: 400px;
+}
+
+.search-container input {
+  width: 80%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-btn {
+  padding: 0 1.5rem;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ddd;
+  border-left: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Gallery Header */
+.gallery-header {
+  margin: 2rem 0;
+}
+
+.gallery-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.gallery-header .btn-primary {
+  padding: 0.8rem 1.5rem;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.gallery-header .btn-primary:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Gallery Filter */
+.gallery-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.filter-btn {
+  padding: 0.4rem 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.filter-btn.active {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  border: none;
+  box-shadow: none;
+}
+
+.gallery-item:hover {
+  opacity: 0.9;
+  transform: none;
+  box-shadow: none;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: auto;
+}
+
+/* Preview Modal */
+.gallery-preview-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+}
+
+.preview-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  height: 90%;
+  margin: 2% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-preview {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.preview-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#preview-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.preview-nav {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.preview-nav:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.prev-btn {
+  left: 20px;
+  transform: rotate(180deg);
+}
+
+.next-btn {
+  right: 20px;
+}
+
+.preview-nav img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .gallery-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-filter {
+    gap: 0.5rem;
+  }
+  
+  .filter-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .preview-nav {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .gallery-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .search-container {
+    max-width: 100%;
+  }
+  
+  .gallery-title {
+    font-size: 1.6rem;
+  }
+  
+  .filter-btn {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+  }
+}
