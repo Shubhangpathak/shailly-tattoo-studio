@@ -160,8 +160,10 @@
   }
   
   .gallery-image {
-    max-height: 60vh;
-    max-width: 85vw;
+   width: 100%;
+  }
+  .gallery-container{
+    width: 100vh;
   }
   
   .gallery-section .preview-container h3 {

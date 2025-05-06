@@ -1,12 +1,12 @@
 .logo-text img{
-  width: 120px;
+  width: 140px;
 }
 
 nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .5em 5%;
+  padding: .8em 5%;
   position: sticky;
   border-bottom: 1.5px solid #000;
   z-index: 1000;
@@ -61,9 +61,14 @@ nav button a{
 /* for phone  */
 .menu-bar{
     align-items: flex-end;
-    width: 35px;
+    width: 42px;
     cursor: pointer;
     display: none;
+}
+
+.menu-bar img {
+    width: 100%;
+    height: auto;
 }
 
 .mobile-menu-overlay {
@@ -150,7 +155,7 @@ nav button a{
 
 @media (max-width: 768px) {
     nav{
-        padding: 5px .5rem;
+        padding: 10px 1rem;
     }
     .menu{
         display: none;
@@ -159,7 +164,7 @@ nav button a{
         display: block;
     }
     .logo-text img {
-        width: 120px;
+        width: 140px;
     }
     .hide{
         display: none;

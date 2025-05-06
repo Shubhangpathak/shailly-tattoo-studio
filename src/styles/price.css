@@ -161,4 +161,7 @@
     .pricing-container .preview-container h3 {
         font-size: 24px;
     }
+    .get-quote-btn{
+        margin-bottom: 25px;
+    }
 }

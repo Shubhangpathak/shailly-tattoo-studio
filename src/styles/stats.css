@@ -107,4 +107,8 @@
   .stat-description {
     font-size: 0.8rem;
   }
+  .stat-number{
+    text-decoration:dashed;
+    text-decoration-color: #fff;
+  }
 } 
