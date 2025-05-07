@@ -77,13 +77,13 @@ nav button a{
     left: 0;
     width: 100%;
     height: 0;
-    background-color: var(--clr-dark);
+    background-color: white;
     overflow: hidden;
     z-index: 100;
-    transition: height 0.5s ease;
+    transition: height 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .mobile-menu-overlay.active {
@@ -93,64 +93,10 @@ nav button a{
 .mobile-menu-content {
     padding: 1rem 1.2rem;
     width: 100%;
-    color: white;
+    color: var(--clr-dark);
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.mobile-menu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-    width: 100%;
-    padding-top: 0.5rem;
-}
-
-.mobile-menu-header img {
-    width: 140px;
-    filter: invert(1);
-}
-
-.close-menu {
-    font-size: 2.5rem;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: white;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease;
-    position: relative;
-    z-index: 1001;
-    width: 60px;
-    height: 60px;
-    margin: 0;
-    line-height: 1;
-    border-radius: 50%;
-}
-
-.close-menu:hover {
-    transform: rotate(90deg);
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.close-menu:active {
-    transform: scale(0.95);
-}
-
-/* Add a larger touch target area */
-.close-menu::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    z-index: -1;
 }
 
 .mobile-menu-links {
@@ -163,7 +109,7 @@ nav button a{
 }
 
 .mobile-menu-links a {
-    color: white;
+    color: var(--clr-dark);
     position: relative;
     display: inline-block;
     transition: transform 0.3s ease;
@@ -179,8 +125,8 @@ nav button a{
 
 .mobile-menu-links .get-in-touch-mobile {
     display: inline-block;
-    background-color: white;
-    color: var(--clr-dark);
+    background-color: var(--clr-dark);
+    color: white;
     padding: 10px 28px;
     border-radius: 26px;
     margin-top: 1rem;
@@ -193,9 +139,9 @@ nav button a{
 }
 
 .mobile-menu-links .get-in-touch-mobile:hover {
-    background-color: #f0f0f0;
+    background-color: #333;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(255,255,255,0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 @media (max-width: 768px) {
@@ -220,17 +166,6 @@ nav button a{
     .mobile-menu-content {
         padding: 1rem 1.2rem;
         align-items: center;
-    }
-    
-    .mobile-menu-header {
-        margin-bottom: 1.5rem;
-    }
-    
-    .close-menu {
-        font-size: 2rem;
-        padding: 12px;
-        width: 50px;
-        height: 50px;
     }
     
     .mobile-menu-links {
@@ -263,17 +198,6 @@ nav button a{
     
     .menu-bar {
         width: 28px;
-    }
-    
-    .mobile-menu-header {
-        margin-bottom: 1.2rem;
-    }
-    
-    .close-menu {
-        font-size: 1.8rem;
-        width: 45px;
-        height: 45px;
-        padding: 10px;
     }
     
     .mobile-menu-links {

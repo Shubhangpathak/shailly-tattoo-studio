@@ -95,11 +95,10 @@
     display: none;
   }
   .gallery-image {
-    height: auto;
+    height: 500px;
     width: auto;
     flex-shrink: 0;
-    max-height: 85vh;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 14px;
   }
   .scroll-btn {
@@ -138,11 +137,9 @@
   }
   
   .gallery-image {
-    max-height: 60vh;
-    max-width: 85vw;
-    min-width: 280px;
     height: 400px;
-    object-fit: cover;
+    width: auto;
+    object-fit: contain;
   }
   
   .scroll-btn {
@@ -177,10 +174,9 @@
   }
   
   .gallery-image {
-    max-height: 50vh;
-    min-width: 240px;
     height: 320px;
-    max-width: 90vw;
+    width: auto;
+    object-fit: contain;
   }
   
   .scroll-btn {
