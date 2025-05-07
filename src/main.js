@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menuToggle.addEventListener('click', () => {
       mobileMenu.classList.add('active');
       document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+      menuToggle.style.display = 'none'; // Hide menu bar when menu is open
     });
   }
 
@@ -92,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     closeMenu.addEventListener('click', () => {
       mobileMenu.classList.remove('active');
       document.body.style.overflow = ''; // Re-enable scrolling
+      menuToggle.style.display = 'block'; // Show menu bar when menu is closed
     });
   }
 
@@ -100,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', () => {
       mobileMenu.classList.remove('active');
       document.body.style.overflow = '';
+      menuToggle.style.display = 'block'; // Show menu bar when menu is closed
     });
   });
 
