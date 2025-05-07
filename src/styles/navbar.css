@@ -91,9 +91,12 @@ nav button a{
 }
 
 .mobile-menu-content {
-    padding: 2rem;
+    padding: 1.5rem 1.2rem;
     width: 100%;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .mobile-menu-header {
@@ -101,6 +104,7 @@ nav button a{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 3rem;
+    width: 100%;
 }
 
 .mobile-menu-header img {
@@ -111,6 +115,28 @@ nav button a{
 .close-menu {
     font-size: 2.5rem;
     cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1001;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    line-height: 1;
+}
+
+.close-menu:hover {
+    transform: rotate(90deg);
+}
+
+.close-menu:active {
+    transform: scale(0.95);
 }
 
 .mobile-menu-links {
@@ -118,6 +144,8 @@ nav button a{
     flex-direction: column;
     gap: 1.5rem;
     font-size: 1.5rem;
+    align-items: center;
+    width: 100%;
 }
 
 .mobile-menu-links a {
@@ -126,6 +154,9 @@ nav button a{
     display: inline-block;
     transition: transform 0.3s ease;
     font-family: 'Arimo', sans-serif;
+    text-align: center;
+    width: 100%;
+    max-width: 200px;
 }
 
 .mobile-menu-links a:hover {
@@ -156,17 +187,89 @@ nav button a{
 @media (max-width: 768px) {
     nav{
         padding: 10px 1rem;
+        align-items: center;
     }
     .menu{
         display: none;
     }
     .menu-bar{
         display: block;
+        width: 32px;
     }
     .logo-text img {
-        width: 140px;
+        width: 120px;
     }
     .hide{
         display: none;
+    }
+    
+    .mobile-menu-content {
+        padding: 1.5rem 1.2rem;
+        align-items: center;
+    }
+    
+    .mobile-menu-header {
+        margin-bottom: 2rem;
+    }
+    
+    .close-menu {
+        font-size: 2rem;
+        padding: 12px;
+        width: 45px;
+        height: 45px;
+        margin: 0;
+        position: relative;
+        z-index: 1001;
+    }
+    
+    .mobile-menu-links {
+        gap: 1.2rem;
+        font-size: 1.3rem;
+        align-items: center;
+    }
+    
+    .mobile-menu-links a {
+        padding: 8px 0;
+        text-align: center;
+    }
+    
+    .mobile-menu-links .get-in-touch-mobile {
+        margin-top: 1.5rem;
+        padding: 12px 30px;
+        font-weight: 500;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    nav {
+        padding: 8px 0.8rem;
+    }
+    
+    .logo-text img {
+        width: 100px;
+    }
+    
+    .menu-bar {
+        width: 28px;
+    }
+    
+    .mobile-menu-header img {
+        width: 110px;
+    }
+    
+    .close-menu {
+        font-size: 1.8rem;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+    }
+    
+    .mobile-menu-links {
+        font-size: 1.2rem;
+    }
+    
+    .mobile-menu-links a {
+        max-width: 180px;
     }
 }

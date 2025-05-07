@@ -89,6 +89,7 @@
     scroll-behavior: smooth;
     padding-bottom: 20px;
     padding-top: 8px;
+    width: 100%;
   }
   .gallery-container::-webkit-scrollbar {
     display: none;
@@ -98,6 +99,8 @@
     width: auto;
     flex-shrink: 0;
     max-height: 85vh;
+    object-fit: cover;
+    border-radius: 14px;
   }
   .scroll-btn {
     position: absolute;
@@ -128,13 +131,23 @@
     padding: 3rem 1rem;
   }
   
+  .gallery-container {
+    gap: 15px;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
   .gallery-image {
-    max-height: 70vh;
+    max-height: 60vh;
     max-width: 85vw;
+    min-width: 280px;
+    height: 400px;
+    object-fit: cover;
   }
   
   .scroll-btn {
     padding: 0.3rem;
+    background-color: rgba(154, 154, 154, 0.9);
   }
   
   .scroll-btn img {
@@ -159,11 +172,26 @@
     padding: 2rem 0.8rem;
   }
   
-  .gallery-image {
-   width: 100%;
+  .gallery-container {
+    gap: 12px;
   }
-  .gallery-container{
-    width: 100vh;
+  
+  .gallery-image {
+    max-height: 50vh;
+    min-width: 240px;
+    height: 320px;
+    max-width: 90vw;
+  }
+  
+  .scroll-btn {
+    padding: 0.25rem;
+    background-color: rgba(154, 154, 154, 0.95);
+      top: 65%;
+  }
+  
+  .scroll-btn img {
+    width: 18px;
+    height: 18px;
   }
   
   .gallery-section .preview-container h3 {
