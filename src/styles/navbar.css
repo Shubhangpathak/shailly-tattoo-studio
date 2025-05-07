@@ -7,7 +7,11 @@ nav{
   justify-content: space-between;
   align-items: center;
   padding: .8em 5%;
-  position: sticky;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
   border-bottom: 1.5px solid #000;
   z-index: 1000;
 }
@@ -80,7 +84,6 @@ nav button a{
     background-color: white;
     overflow: hidden;
     z-index: 100;
-    transition: height 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
