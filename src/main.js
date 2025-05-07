@@ -79,31 +79,48 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileMenuLinks = document.querySelectorAll('.mobile-menu-links a');
 
-  // Open mobile menu
-  if (menuToggle) {
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.add('active');
-      document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
-      menuToggle.style.display = 'none'; // Hide menu bar when menu is open
-    });
+  function closeMobileMenu() {
+    mobileMenu.classList.remove('active');
+    document.body.style.overflow = '';
+    menuToggle.style.display = 'block';
   }
 
-  // Close mobile menu
+  function openMobileMenu() {
+    mobileMenu.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    menuToggle.style.display = 'none';
+  }
+
+  // Open mobile menu
+  if (menuToggle) {
+    menuToggle.addEventListener('click', openMobileMenu);
+  }
+
+  // Close mobile menu when clicking the close button
   if (closeMenu) {
-    closeMenu.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-      document.body.style.overflow = ''; // Re-enable scrolling
-      menuToggle.style.display = 'block'; // Show menu bar when menu is closed
+    closeMenu.addEventListener('click', closeMobileMenu);
+  }
+
+  // Close menu when clicking anywhere on the overlay
+  if (mobileMenu) {
+    mobileMenu.addEventListener('click', (e) => {
+      // Only close if clicking the overlay itself, not its children
+      if (e.target === mobileMenu) {
+        closeMobileMenu();
+      }
     });
   }
 
   // Close menu when clicking on links
   mobileMenuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('active');
-      document.body.style.overflow = '';
-      menuToggle.style.display = 'block'; // Show menu bar when menu is closed
-    });
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  // Close menu when pressing Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+      closeMobileMenu();
+    }
   });
 
   // Initialize GSAP animations

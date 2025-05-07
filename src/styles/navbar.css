@@ -91,7 +91,7 @@ nav button a{
 }
 
 .mobile-menu-content {
-    padding: 1.5rem 1.2rem;
+    padding: 1rem 1.2rem;
     width: 100%;
     color: white;
     display: flex;
@@ -103,8 +103,9 @@ nav button a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     width: 100%;
+    padding-top: 0.5rem;
 }
 
 .mobile-menu-header img {
@@ -118,25 +119,38 @@ nav button a{
     background: none;
     border: none;
     color: white;
-    padding: 10px;
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease;
     position: relative;
     z-index: 1001;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     margin: 0;
     line-height: 1;
+    border-radius: 50%;
 }
 
 .close-menu:hover {
     transform: rotate(90deg);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .close-menu:active {
     transform: scale(0.95);
+}
+
+/* Add a larger touch target area */
+.close-menu::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    z-index: -1;
 }
 
 .mobile-menu-links {
@@ -204,22 +218,19 @@ nav button a{
     }
     
     .mobile-menu-content {
-        padding: 1.5rem 1.2rem;
+        padding: 1rem 1.2rem;
         align-items: center;
     }
     
     .mobile-menu-header {
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
     }
     
     .close-menu {
         font-size: 2rem;
         padding: 12px;
-        width: 45px;
-        height: 45px;
-        margin: 0;
-        position: relative;
-        z-index: 1001;
+        width: 50px;
+        height: 50px;
     }
     
     .mobile-menu-links {
@@ -254,14 +265,14 @@ nav button a{
         width: 28px;
     }
     
-    .mobile-menu-header img {
-        width: 110px;
+    .mobile-menu-header {
+        margin-bottom: 1.2rem;
     }
     
     .close-menu {
         font-size: 1.8rem;
-        width: 40px;
-        height: 40px;
+        width: 45px;
+        height: 45px;
         padding: 10px;
     }
     
