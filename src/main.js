@@ -145,3 +145,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+// scroll bar letf
+function updateButtons() {
+  if (!gallery || !btnLeft || !btnRight) return;
+  
+  // Show left button if we've scrolled right
+  btnLeft.style.display = gallery.scrollLeft > 10 ? 'block' : 'none';
+  
+  // Show right button if there's more content to scroll
+  const isAtEnd = gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 10;
+  btnRight.style.display = isAtEnd ? 'none' : 'block';
+}
