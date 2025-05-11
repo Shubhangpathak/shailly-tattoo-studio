@@ -40,8 +40,8 @@ document.querySelector('#app').innerHTML = `
         <div class="mobile-menu-links">
           <a href="index.html">Home</a>
           <a href="gallery,html">Gallery</a>
-          <a href="#about-section">About</a>
-          <a href="#price-section">Pricing</a>
+          <a href="#about">About</a>
+          <a href="#price">Pricing</a>
           <a href="#findus">Locations</a>
           <a id="openBookingModal" class="get-in-touch-mobile">Book Now</a>
         </div>
