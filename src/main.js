@@ -111,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('bookingModal');
     const openButtons = document.querySelectorAll('#openBookingModal');
     const closeButton = document.querySelector('.close-modal-btn');
+    const bookingForm = document.getElementById('tattooBookingForm'); // Get the form
 
     // Open modal function
     function openModal() {
@@ -144,6 +145,41 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }
     });
+
+    // Handle form submission
+    if (bookingForm) {
+        bookingForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            const formData = new FormData(bookingForm);
+            const object = {};
+            formData.forEach((value, key) => object[key] = value);
+            const json = JSON.stringify(object);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let jsonResponse = await response.json();
+                if (response.status == 200) {
+                    alert('Form submitted successfully!'); // Show success alert
+                    bookingForm.reset(); // Reset the form
+                    closeModal(); // Close the modal
+                } else {
+                    console.log(response);
+                    alert('Something went wrong: ' + jsonResponse.message);
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                alert('Something went wrong!');
+            });
+        });
+    }
 });
 
 
