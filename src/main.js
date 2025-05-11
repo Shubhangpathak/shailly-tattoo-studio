@@ -10,6 +10,7 @@ import './styles/price.css'
 import './styles/findus.css'
 import './styles/faq.css'
 import './styles/review.css'
+import './styles/modal.css'
 import './styles/stats.css'
 import './styles/footer.css'
 import './styles/responsive.css'
@@ -27,7 +28,7 @@ document.querySelector('#app').innerHTML = `
         <a href="gallery.html">Gallery</a>
         <a href="#about">About</a>
         <a href="#findus">Location</a>
-        <a href="#price-section" class="clr-light">Book Now</a>
+        <a id="openBookingModal" class="clr-light">Book Now</a>
         </div>
       <div class="menu-bar" id="menu-toggle"><img src="/icons/bx-menu.svg" alt=""></div>
     </nav>
@@ -41,7 +42,7 @@ document.querySelector('#app').innerHTML = `
           <a href="#about-section">About</a>
           <a href="#price-section">Pricing</a>
           <a href="#findus">Locations</a>
-          <a href="#price-section" class="get-in-touch-mobile">Book Now</a>
+          <a id="openBookingModal" class="get-in-touch-mobile">Book Now</a>
         </div>
       </div>
     </div>
@@ -102,4 +103,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize GSAP animations
   initAnimations();
+});
+
+// Modal functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('bookingModal');
+    const openButtons = document.querySelectorAll('#openBookingModal');
+    const closeButton = document.querySelector('.close-modal-btn');
+
+    // Open modal function
+    function openModal() {
+        if (modal) {
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        }
+    }
+
+    // Close modal function
+    function closeModal() {
+        if (modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+    }
+
+    // Add click event listeners to all open modal buttons
+    openButtons.forEach(button => {
+        button.addEventListener('click', openModal);
+    });
+
+    // Close modal when clicking the close button
+    if (closeButton) {
+        closeButton.addEventListener('click', closeModal);
+    }
+
+    // Close modal when clicking outside the modal content
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
 });
