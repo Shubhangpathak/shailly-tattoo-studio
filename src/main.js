@@ -25,6 +25,7 @@ document.querySelector('#app').innerHTML = `
   <nav>
       <div class="logo-text"><img src="/logo.png" alt=""></div>
       <div class="menu">
+        <a href="Home.html">Home</a>
         <a href="gallery.html">Gallery</a>
         <a href="#about">About</a>
         <a href="#findus">Location</a>
@@ -37,8 +38,8 @@ document.querySelector('#app').innerHTML = `
     <div class="mobile-menu-overlay" id="mobile-menu">
       <div class="mobile-menu-content">
         <div class="mobile-menu-links">
-          <a href="#hero-section">Home</a>
-          <a href="#gallery-section">Gallery</a>
+          <a href="index.html">Home</a>
+          <a href="gallery,html">Gallery</a>
           <a href="#about-section">About</a>
           <a href="#price-section">Pricing</a>
           <a href="#findus">Locations</a>
