@@ -49,8 +49,11 @@
   }
   @media (max-width: 768px) {
     .sticky-widgets{
-      display: none;
+      /* display: none; */
     }
+    .widget-icon a:first-child {
+      display: none;   
+  }
   }
   .mobile-menu img {
     width: 32px;

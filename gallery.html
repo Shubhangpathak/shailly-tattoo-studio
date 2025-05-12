@@ -6,10 +6,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery - Shailly's Tattoo Studio</title>
   <link rel="stylesheet" href="/src/styles/gallerypage.css">
-
+  <style>
+    /* Additional styles for image preview and home button */
+    .gallery-item img {
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    
+    .gallery-item img:hover {
+      transform: scale(1.03);
+    }
+    
+    .home-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 3rem auto 1rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      width: fit-content;
+      border-radius: 4px;
+    }
+    
+    .home-button:hover {
+      background-color: #333;
+    }
+    
+    .home-button img {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      transform: rotate(180deg);
+    }
+    
+    /* Make modal more responsive */
+    @media (max-width: 768px) {
+      .preview-modal-content {
+        width: 95%;
+        height: 80%;
+      }
+      
+      .preview-nav {
+        width: 40px;
+        height: 40px;
+      }
+      
+      .prev-btn {
+        left: 10px;
+      }
+      
+      .next-btn {
+        right: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div id="app"></div>
+  <nav>
+      <div class="logo-text"><img src="/logo.png" alt=""></div>
+      <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#findus">Location</a>
+        <a id="openBookingModal" class="clr-light">Book Now</a>
+        </div>
+      <div class="menu-bar" id="menu-toggle"><img src="/icons/bx-menu.svg" alt=""></div>
+    </nav>
+
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+      <div class="mobile-menu-content">
+        <div class="mobile-menu-links">
+          <a href="index.html">Home</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#price">Pricing</a>
+          <a href="index.html#findus">Locations</a>
+          <a id="openBookingModal" class="get-in-touch-mobile">Book Now</a>
+        </div>
+      </div>
+    </div>
   
   <section class="gallery-page">
     <div class="search-container">
@@ -27,42 +110,60 @@
     
     <div class="gallery-grid">
       <div class="gallery-item" data-category="minimal">
-        <img src="/images/img1.png" alt="Tattoo Design">
+        <img src="/images/img1.png" alt="Tattoo Design" class="gallery-img">
       </div>
       <div class="gallery-item" data-category="colorful">
-        <img src="/images/img2.png" alt="Tattoo Design">
+        <img src="/images/img2.png" alt="Tattoo Design" class="gallery-img">
       </div>
       <div class="gallery-item" data-category="traditional">
-        <img src="/images/img4.png" alt="Tattoo Design">
+        <img src="/images/img4.png" alt="Tattoo Design" class="gallery-img">
       </div>
       <div class="gallery-item" data-category="portraits">
-        <img src="/images/img5.png" alt="Tattoo Design">
+        <img src="/images/img5.png" alt="Tattoo Design" class="gallery-img">
       </div>
       <div class="gallery-item" data-category="minimal">
-        <img src="/images/img6.png" alt="Tattoo Design">
+        <img src="/images/img6.png" alt="Tattoo Design" class="gallery-img">
       </div>
       <div class="gallery-item" data-category="colorful">
-        <img src="/images/img7.png" alt="Tattoo Design">
+        <img src="/images/img7.png" alt="Tattoo Design" class="gallery-img">
       </div>
       <div class="gallery-item" data-category="portraits">
-        <img src="/images/img8.png" alt="Tattoo Design">
+        <img src="/images/img8.png" alt="Tattoo Design" class="gallery-img">
       </div>
       <div class="gallery-item" data-category="traditional">
-        <img src="/images/img9.png" alt="Tattoo Design">
+        <img src="/images/img9.png" alt="Tattoo Design" class="gallery-img">
       </div>
       <div class="gallery-item" data-category="minimal">
-        <img src="/images/img10.png" alt="Tattoo Design">
+        <img src="/images/img10.png" alt="Tattoo Design" class="gallery-img">
       </div>
       <div class="gallery-item" data-category="colorful">
-        <img src="/images/img11.png" alt="Tattoo Design">
+        <img src="/images/img11.png" alt="Tattoo Design" class="gallery-img">
       </div>
       <div class="gallery-item" data-category="traditional">
-        <img src="/images/new.png" alt="Tattoo Design">
+        <img src="/images/new.png" alt="Tattoo Design" class="gallery-img">
       </div>
       <div class="gallery-item" data-category="minimal">
-        <img src="/images/new2.png" alt="Tattoo Design">
+        <img src="/images/new2.png" alt="Tattoo Design" class="gallery-img">
+      </div>
+      <div class="gallery-item" data-category="minimal">
+        <img src="/images/img13.png" alt="Tattoo Design" class="gallery-img">
+      </div>
+      <div class="gallery-item" data-category="minimal">
+        <img src="/images/img14.png" alt="Tattoo Design" class="gallery-img">
+      </div>
+      <div class="gallery-item" data-category="minimal">
+        <img src="/images/img15.png" alt="Tattoo Design" class="gallery-img">
+      </div>
+      <div class="gallery-item" data-category="minimal">
+        <img src="/images/img16.png" alt="Tattoo Design" class="gallery-img">
       </div>
     </div>
+    
+    <!-- Home Button -->
+    <a href="index.html" class="home-button">
+      <img src="/icons/bx-chevron-right.svg" alt="Back">
+      Back to Home
+    </a>
   </section>
   
   <!-- Image Preview Modal -->
@@ -80,6 +181,252 @@
       </div>
     </div>
   </div>
+
+  <div id="bookingModal" class="modal-backdrop">
+    <div class="modal-content">
+        <span class="close-modal-btn" id="closeBookingModal">&times;</span>
+        <form id="tattooBookingForm" class="booking-form">
+            <h2>Book Your Tattoo Appointment</h2>
+
+            <input type="hidden" name="access_key" value="537eb431-be83-4838-ab49-5b346fba20a0">
+
+            <div class="form-group">
+                <label for="fullName">Full Name <span style="color:red;">*</span></label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number <span style="color:red;">*</span></label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" title="Please enter a valid phone number (10-15 digits)" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address <span style="color:red;">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Choose Location <span style="color:red;">*</span></label>
+                <select id="location" name="location" required>
+                    <option value="" disabled selected>Select a location</option>
+                    <option value="raipur">Raipur</option>
+                    <option value="mumbai">Mumbai</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="preferredDate">Preferred Date <span style="color:red;">*</span></label>
+                <input type="date" id="preferredDate" name="preferredDate" required>
+            </div>
+
+            <!-- <div class="form-group">
+                <label for="preferredTime">Preferred Time Slot <span style="color:red;">*</span></label>
+                <input type="time" id="preferredTime" name="preferredTime" required>
+            </div> -->
+
+            <div class="form-group">
+                <label for="tattooDescription">Tattoo Description/Idea <span class="optional-label">(Optional)</span></label>
+                <textarea id="tattooDescription" name="tattooDescription" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Request Appointment</button>
+        </form>
+    </div>
+</div>
   <script type="module" src="/src/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get all gallery images
+      const galleryImages = document.querySelectorAll('.gallery-img');
+      const previewModal = document.getElementById('gallery-preview');
+      const modalImg = document.getElementById('preview-image');
+      const closeBtn = document.querySelector('.close-preview');
+      const prevBtn = document.querySelector('.prev-btn');
+      const nextBtn = document.querySelector('.next-btn');
+      let currentImageIndex = 0;
+      
+      // Booking Modal Functionality
+      const bookingModal = document.getElementById('bookingModal');
+      const openBookingButtons = document.querySelectorAll('#openBookingModal');
+      const closeBookingButton = document.querySelector('.close-modal-btn');
+      const bookingForm = document.getElementById('tattooBookingForm');
+      
+      // Function to open image preview modal
+      function openPreviewModal(index) {
+        const images = Array.from(galleryImages);
+        currentImageIndex = index;
+        modalImg.src = images[currentImageIndex].src;
+        previewModal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        
+        // Update navigation buttons visibility
+        updateNavButtons();
+      }
+      
+      // Function to close image preview modal
+      function closePreviewModal() {
+        previewModal.style.display = 'none';
+        document.body.style.overflow = ''; // Restore scrolling
+      }
+      
+      // Function to open booking modal
+      function openBookingModal() {
+        if (bookingModal) {
+          bookingModal.style.display = 'block';
+          document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        }
+      }
+      
+      // Function to close booking modal
+      function closeBookingModal() {
+        if (bookingModal) {
+          bookingModal.style.display = 'none';
+          document.body.style.overflow = ''; // Restore scrolling
+        }
+      }
+      
+      // Function to navigate to previous image
+      function prevImage() {
+        const images = Array.from(galleryImages);
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        modalImg.src = images[currentImageIndex].src;
+        updateNavButtons();
+      }
+      
+      // Function to navigate to next image
+      function nextImage() {
+        const images = Array.from(galleryImages);
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        modalImg.src = images[currentImageIndex].src;
+        updateNavButtons();
+      }
+      
+      // Handle booking form submission
+      if (bookingForm) {
+        bookingForm.addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent default form submission
+          const formData = new FormData(bookingForm);
+          const object = {};
+          formData.forEach((value, key) => object[key] = value);
+          const json = JSON.stringify(object);
+
+          fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: json
+          })
+          .then(async (response) => {
+            let jsonResponse = await response.json();
+            if (response.status == 200) {
+              alert('Form submitted successfully!'); // Show success alert
+              bookingForm.reset(); // Reset the form
+              closeBookingModal(); // Close the modal
+            } else {
+              console.log(response);
+              alert('Something went wrong: ' + jsonResponse.message);
+            }
+          })
+          .catch(error => {
+            console.log(error);
+            alert('Something went wrong!');
+          });
+        });
+      }
+      
+      // Update navigation buttons visibility
+      function updateNavButtons() {
+        const images = Array.from(galleryImages);
+        prevBtn.style.display = images.length > 1 ? 'flex' : 'none';
+        nextBtn.style.display = images.length > 1 ? 'flex' : 'none';
+      }
+      
+      // Initialize mobile menu toggle functionality
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuLinks = document.querySelectorAll('.mobile-menu-links a');
+      
+      // State
+      let isMobileNavOpen = false;
+      
+      // Toggle mobile menu
+      if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+          isMobileNavOpen = !isMobileNavOpen;
+          if (isMobileNavOpen) {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+          } else {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        });
+      }
+      
+      // Close menu when clicking on links
+      mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          isMobileNavOpen = false;
+          mobileMenu.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      });
+      
+      // Add click event to all gallery images
+      galleryImages.forEach((img, index) => {
+        img.addEventListener('click', () => openPreviewModal(index));
+      });
+      
+      // Close preview modal when clicking close button
+      closeBtn.addEventListener('click', closePreviewModal);
+      
+      // Close preview modal when clicking outside the image
+      previewModal.addEventListener('click', function(event) {
+        if (event.target === previewModal) {
+          closePreviewModal();
+        }
+      });
+      
+      // Navigate to previous/next image
+      prevBtn.addEventListener('click', prevImage);
+      nextBtn.addEventListener('click', nextImage);
+      
+      // Add click event to all booking buttons
+      openBookingButtons.forEach(button => {
+        button.addEventListener('click', openBookingModal);
+      });
+      
+      // Close booking modal when clicking the close button
+      if (closeBookingButton) {
+        closeBookingButton.addEventListener('click', closeBookingModal);
+      }
+      
+      // Close booking modal when clicking outside the modal content
+      if (bookingModal) {
+        bookingModal.addEventListener('click', (event) => {
+          if (event.target === bookingModal) {
+            closeBookingModal();
+          }
+        });
+      }
+      
+      // Keyboard navigation
+      document.addEventListener('keydown', function(event) {
+        if (previewModal.style.display === 'block') {
+          if (event.key === 'ArrowLeft') {
+            prevImage();
+          } else if (event.key === 'ArrowRight') {
+            nextImage();
+          } else if (event.key === 'Escape') {
+            closePreviewModal();
+          }
+        } else if (bookingModal && bookingModal.style.display === 'block' && event.key === 'Escape') {
+          closeBookingModal();
+        }
+      });
+    });
+  </script>
 </body>
 </html>

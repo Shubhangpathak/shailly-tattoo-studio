@@ -22,10 +22,10 @@ import './styles/mobile-enhancements.css'
 import { initAnimations } from './animations.js'
 
 document.querySelector('#app').innerHTML = `
-  <nav>
+  <nav id="nav">
       <div class="logo-text"><img src="/logo.png" alt=""></div>
       <div class="menu">
-        <a href="Home.html">Home</a>
+        <a href="#nav">Home</a>
         <a href="gallery.html">Gallery</a>
         <a href="#about">About</a>
         <a href="#findus">Location</a>
