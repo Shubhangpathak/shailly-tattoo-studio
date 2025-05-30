@@ -55,6 +55,19 @@
 .location-contact-info {
     margin-bottom: 1rem;
 }
+.find-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 26px;
+    background-color: #000;
+    color: var(--clr-light);
+    height: 40px;
+    align-items: center;
+}
+.find-btn:last-child{
+    margin-top: 30px;
+}
 
 @media (min-width: 993px) {
     .findus {
@@ -123,23 +136,6 @@
         align-items: center;
     }
     
-    .find-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        color: var(--clr-light);
-        background-color: var(--clr-dark);
-        border: 1.5px solid var(--clr-dark);
-        padding: 10px 20px;
-        border-radius: 6px;
-        font-size: 1rem;
-        font-weight: 500;
-        letter-spacing: 0.5px;
-        transition: border 0.2s, color 0.2s, background 0.2s;
-        text-decoration: none;
-        cursor: pointer;
-        margin-top: 0.5rem;
-    }
     
     .find-btn:hover {
         color: var(--clr-accent, #5A59EC);
