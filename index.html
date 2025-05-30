@@ -11,6 +11,13 @@
     <link rel="preload" href="/fonts/NeueMontreal-Medium.otf" as="font" type="font/otf" crossorigin>
     <link rel="preload" href="/fonts/NeueMontreal-Bold.otf" as="font" type="font/otf" crossorigin>
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://www.google.com">
+    <link rel="preconnect" href="https://maps.googleapis.com">
+
+    <link rel="preload" as="image" href="/images/new-430.webp" imagesrcset="/images/new-430.webp 430w, /images/new-800.webp 800w" imagesizes="(max-width: 600px) 430px, 800px">
+    <link rel="preload" as="image" href="/images/new2-430.webp" imagesrcset="/images/new2-430.webp 430w, /images/new2-800.webp 800w" imagesizes="(max-width: 600px) 430px, 800px">
+
     
   </head>
   <body>
@@ -21,9 +28,10 @@
         <button class="btn-primary main-hero-btn" id="openBookingModal">book an appointment</button>
       </div>
       <div class="hero-video-container">
-        <video class="hero-video" autoplay muted loop playsinline>
-          <source src="/video.mp4" type="video/mp4">
-        </video>
+        <video class="hero-video" autoplay muted loop playsinline preload="none" poster="/hero-poster.webp">
+  <source src="/video.webm" type="video/webm">
+  <source src="/video.mp4" type="video/mp4">
+</video>
       </div>
       <button class="btn-primary hero-phone-btn" id="openBookingModal">book an appointment</button>
     </section>
@@ -107,16 +115,17 @@
       </button>
       
       <div class="gallery-container" id="gallery">
-        <img class="gallery-image" src="/images/new.png" alt="new Tattoo 1">
-        <img class="gallery-image" src="/images/new2.png" alt="new Tattoo 1">
-        <img class="gallery-image" src="/images/img5.png" alt="Tattoo 4">
-        <img class="gallery-image" src="/images/img1.png" alt="Tattoo 1">
-        <img class="gallery-image" src="/images/img2.png" alt="Tattoo 2">
-        <img class="gallery-image" src="/images/img4.png" alt="Tattoo 3">
-        <img class="gallery-image" src="/images/img6.png" alt="Tattoo 4">
-        <img class="gallery-image" src="/images/img7.png" alt="Tattoo 4">
-        <img class="gallery-image" src="/images/img8.png" alt="Tattoo 4">
-        <img class="gallery-image" src="/images/img9.png" alt="Tattoo 4">
+        <img class="gallery-image" src="/images/new.webp"
+     sizes="(max-width: 600px) 480px, 800px" alt="new Tattoo 1">
+        <img class="gallery-image" src="/images/new2.webp"  sizes="(max-width: 600px) 480px, 800px" alt="new Tattoo 1">
+        <img class="gallery-image" src="/images/img5.webp"  sizes="(max-width: 600px) 480px, 800px" alt="Tattoo 4">
+        <img class="gallery-image" src="/images/img1.png" sizes="(max-width: 600px) 480px, 800px"  alt="Tattoo 1">
+        <img class="gallery-image" src="/images/img2.webp" loading="lazy"  sizes="(max-width: 600px) 480px, 800px" alt="Tattoo 2">
+        <img class="gallery-image" src="/images/img4.webp" loading="lazy" sizes="(max-width: 600px) 480px, 800px" alt="Tattoo 3">
+        <img class="gallery-image" src="/images/img6.webp" loading="lazy" sizes="(max-width: 600px) 480px, 800px" alt="Tattoo 4">
+        <img class="gallery-image" src="/images/img7.webp" loading="lazy" sizes="(max-width: 600px) 480px, 800px" alt="Tattoo 4">
+        <img class="gallery-image" src="/images/img8.webp" loading="lazy" sizes="(max-width: 600px) 480px, 800px" alt="Tattoo 4">
+        <img class="gallery-image" src="/images/img9.webp" loading="lazy" sizes="(max-width: 600px) 480px, 800px" alt="Tattoo 4">
       </div>
       <button class="scroll-btn scroll-right" onclick="scrollGallery(1)">
         <img src="/icons/bx-chevron-right.svg" alt="Right">
@@ -544,7 +553,7 @@
 
 
 
-
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script type="module" src="/src/main.js"></script>
     <script src="/src/gallery.js"></script>
   </body>

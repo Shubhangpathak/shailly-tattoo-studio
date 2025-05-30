@@ -135,8 +135,7 @@
         flex-direction: column;
         align-items: center;
     }
-    
-    
+   
     .find-btn:hover {
         color: var(--clr-accent, #5A59EC);
         border-color: var(--clr-accent, #5A59EC);

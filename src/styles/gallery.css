@@ -78,7 +78,9 @@
         font-size: 1.5rem;
     }
   }
-  
+  .gallery-filter{
+    padding-top: 30px;
+  }
   .gallery-container {
     display: flex;
     gap: 22px;
@@ -97,11 +99,9 @@
     flex-shrink: 0;
     object-fit: contain;
     border-radius: 14px;
-    transition: transform 0.3s ease;
+    transition:  0.3s ease;
 }
-
 .gallery-image:hover {
-    transform: scale(1.1);
     box-shadow: 0 4px 18px rgba(0,0,0,0.13);
 }
   .scroll-btn {

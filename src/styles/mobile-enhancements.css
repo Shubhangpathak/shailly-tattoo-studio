@@ -45,3 +45,69 @@
     height: 65vh !important;
   }
 } 
+
+
+/* Initial states for elements to be animated */
+/* You can use a common class or target elements directly */
+.reveal-on-scroll {
+  opacity: 0;
+  visibility: hidden; /* Initially hidden */
+}
+
+/* For elements that slide up */
+.reveal-slide-up {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px); /* Default slide amount */
+}
+
+.hero-heading,
+.hero .btn-primary,
+.about-title,
+.about-text,
+.cta h2,
+.cta .btn-primary,
+.cta .cta-content2 p,
+.preview-container h3,
+.preview-container .btn-primary,
+.gallery-image,
+.stat-item,
+.pricing-card,
+.review-card,
+.faq-header h2,
+.faq-header .faq-subtitle,
+.faq-item,
+.footer-nav, .footer-contact, .footer-social, .footer .star-icon /* Assuming .footer and its children exist */
+{
+  opacity: 0; /* Or use a common class like .reveal-on-scroll */
+  visibility: hidden;
+}
+
+.hero-heading,
+.hero .btn-primary,
+.about-title,
+.about-text, /* Especially this one! */
+.cta h2,
+.cta .btn-primary,
+.cta .cta-content2 p,
+.preview-container h3,
+.preview-container .btn-primary,
+.gallery-image,
+.stat-item,
+.pricing-card,
+.review-card,
+.faq-header h2,
+.faq-header .faq-subtitle,
+.faq-item,
+.footer-nav, .footer-contact, .footer-social, .footer .star-icon {
+  opacity: 0;
+  visibility: hidden; /* Crucial: makes element non-interactive and invisible */
+  transform: translateY(25px); /* Default starting position if sliding up */
+}
+
+/* If an element only fades, not slides: */
+.fade-in-only {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(0); /* Or remove transform if no slide at all */
+}

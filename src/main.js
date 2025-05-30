@@ -21,11 +21,15 @@ import './styles/gallerypage.css'
 import './styles/mobile-enhancements.css'
 import { initAnimations } from './animations.js'
 
+
+// Example using sharp.js (Node.js)
+
+
 document.querySelector('#app').innerHTML = `
   <nav id="nav">
-      <div class="logo-text"><img src="/logo.png" alt=""></div>
+      <div class="logo-text"><img src="/images/logo.svg" alt="logo"></div>
       <div class="menu">
-        <a href="#nav">Home</a>
+        <a href="#app">Home</a>
         <a href="gallery.html">Gallery</a>
         <a href="#about">About</a>
         <a href="#findus">Location</a>
