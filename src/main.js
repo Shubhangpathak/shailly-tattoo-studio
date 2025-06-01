@@ -19,6 +19,7 @@ import './style.css'
 import './utiles.css'
 import './styles/gallerypage.css'
 import './styles/mobile-enhancements.css'
+import './styles/privacy.css'
 import { initAnimations } from './animations.js'
 
 

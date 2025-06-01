@@ -1,0 +1,208 @@
+ main {
+        padding: 4rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .privacy-header {
+        text-align: center;
+        margin-bottom: 4rem;
+        position: relative;
+      }
+
+      .privacy-header::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: var(--clr-blue);
+        border-radius: 2px;
+      }
+
+      .privacy-header h1 {
+        font-size: 3.5rem;
+        color: var(--clr-dark);
+        margin-bottom: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .privacy-header h2 {
+        color: var(--clr-grey-600);
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+
+      .intro-text {
+        background: var(--clr-grey);
+        padding: 2rem;
+        border-radius: 15px;
+        border: 2px solid var(--clr-light);
+        margin-bottom: 3rem;
+        text-align: center;
+        font-size: 1.1rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .content-section {
+        background: white;
+        border-radius: 15px;
+        padding: 3rem;
+        margin-bottom: 2rem;
+        border: 2px solid var(--clr-light);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+      }
+
+
+      .section-title {
+        font-size: 1.8rem;
+        color: var(--clr-dark);
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--clr-light);
+      }
+
+      .section-number {
+        background: var(--clr-blue);
+        color: white;
+        width: 45px;
+        height: 45px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      .section-content {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--clr-dark);
+      }
+
+      .section-content ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 1rem 0;
+      }
+
+      .section-content li {
+        padding: 0.8rem 0;
+        padding-left: 2rem;
+        position: relative;
+        border-left: 3px solid var(--clr-light);
+        margin-bottom: 0.5rem;
+        background: var(--clr-grey);
+        border-radius: 8px;
+        padding-left: 1.5rem;
+      }
+
+      .section-content li::before {
+        content: '•';
+        position: absolute;
+        left: 0.5rem;
+        color: var(--clr-blue);
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      .highlight-box {
+        background: linear-gradient(135deg, rgba(90, 89, 236, 0.05), rgba(90, 89, 236, 0.1));
+        /* border: 2px solid var(--clr-blue); */
+        padding: 1.5rem;
+        margin: 2rem 0;
+        border-radius: 12px;
+        position: relative;
+        font-weight: 600;
+      }
+
+      .emoji-section {
+        margin: 1.5rem 0;
+        padding: 1.5rem;
+        background: var(--clr-grey);
+        border-radius: 12px;
+        border: 2px solid var(--clr-light);
+      }
+
+      .emoji-title {
+        font-size: 1.3rem;
+        color: var(--clr-blue);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        main {
+          padding: 2rem 1rem;
+        }
+
+        .privacy-header h1 {
+          font-size: 2.5rem;
+        }
+
+        .content-section {
+          padding: 2rem 1.5rem;
+        }
+
+        .section-title {
+          font-size: 1.5rem;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5rem;
+        }
+
+        .section-content {
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .privacy-header h1 {
+          font-size: 2rem;
+        }
+
+        .content-section {
+          padding: 1.5rem 1rem;
+        }
+
+        .intro-text {
+          padding: 1.5rem;
+        }
+      }
+
+      /* Animation */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .content-section {
+        animation: fadeInUp 0.6s ease forwards;
+      }
+
+      .content-section:nth-child(even) {
+        animation-delay: 0.1s;
+      }
+
+      .content-section:nth-child(odd) {
+        animation-delay: 0.2s;
+      }
