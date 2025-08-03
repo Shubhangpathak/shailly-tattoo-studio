@@ -2,7 +2,7 @@
 
 🎨 **About the Project**
 
-Built this for a tattoo studio client as a freelance project. Learned a lot about real-world deployments, branding, and design psychology.
+Built this for a tattoo studio website as a freelance project for a friend. Learned a lot about real-world deployments, branding, and design psychology.
 This is the official website for **Shailly's Tattoo Studio**, designed and developed to showcase their services, studio galleries, contact information, and studio locations.
 
 
