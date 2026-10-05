@@ -7,6 +7,42 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 7rem;
+  scrollbar-color: var(--accent) var(--canvas);
+  scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--canvas);
+}
+
+html::-webkit-scrollbar-thumb {
+  min-height: 40px;
+  border: 2px solid var(--canvas);
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+  background-clip: padding-box;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-dark);
+}
+
+html::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Use the rounded custom thumb in browsers with WebKit scrollbar support. */
+@supports selector(::-webkit-scrollbar) {
+  html {
+    scrollbar-color: auto;
+    scrollbar-width: auto;
+  }
 }
 
 body {

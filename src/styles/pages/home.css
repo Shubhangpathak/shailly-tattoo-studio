@@ -698,18 +698,26 @@
 }
 
 .final-cta .eyebrow {
+  margin-bottom: 1rem;
   color: #ded9ff;
 }
 
 .final-cta h2 {
-  max-width: 13ch;
+  max-width: 22ch;
   margin: 0 auto 2rem;
   font-size: clamp(2.25rem, 3.8vw, 3.75rem);
   line-height: 1.04;
+  text-wrap: balance;
 }
 
 .final-cta h2 em {
-  color: var(--white);
+  color: #e5e0ff;
+}
+
+.final-cta .button {
+  min-height: 3rem;
+  gap: 0.875rem;
+  padding-inline: 1.5rem;
 }
 
 @media (max-width: 64rem) {
