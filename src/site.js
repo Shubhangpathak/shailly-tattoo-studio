@@ -64,10 +64,12 @@ function footerMarkup() {
           <a class="footer-studio" href="tel:+919826198127"><span>Shankar Nagar · Raipur</span><span class="footer-studio__phone">+91 98261 98127</span></a>
         </div>
         <div class="footer-column footer-column--social">
-          <p class="footer-heading">Follow</p>
-          <a href="https://www.instagram.com/shaillystattoostudio" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
-          <a href="https://www.facebook.com/shailly.shrivastav" target="_blank" rel="noopener noreferrer">Facebook <span aria-hidden="true">↗</span></a>
-          <a href="https://www.youtube.com/@shaillystattoostudio" target="_blank" rel="noopener noreferrer">YouTube <span aria-hidden="true">↗</span></a>
+          <p class="footer-heading">Socials</p>
+          <a href="https://www.instagram.com/shaillystattoostudio" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.instagram.com/shaillystattoomumbai/" target="_blank" rel="noopener noreferrer">Instagram · Mumbai</a>
+          <a href="https://www.instagram.com/shaillystattooraipur/" target="_blank" rel="noopener noreferrer">Instagram · Raipur</a>
+          <a href="https://www.facebook.com/shailly.shrivastav" target="_blank" rel="noopener noreferrer">Facebook </a>
+          <a href="https://www.youtube.com/@shaillystattoostudio" target="_blank" rel="noopener noreferrer">YouTube </a>
         </div>
         <div class="site-footer__email">
           <span>Have a question?</span>
@@ -82,6 +84,15 @@ function footerMarkup() {
 }
 
 function bookingDialogMarkup() {
+  const timeOptions = Array.from({ length: 19 }, (_, index) => {
+    const minutes = 11 * 60 + index * 30;
+    const hour = Math.floor(minutes / 60);
+    const minute = String(minutes % 60).padStart(2, '0');
+    const value = `${String(hour).padStart(2, '0')}:${minute}`;
+    const label = `${hour % 12 || 12}:${minute} ${hour < 12 ? 'am' : 'pm'}`;
+    return `<option value="${value}">${label}</option>`;
+  }).join('');
+
   return `
     <dialog class="booking-dialog" data-booking-modal aria-labelledby="booking-title">
       <div class="booking-dialog__header">
@@ -104,8 +115,7 @@ function bookingDialogMarkup() {
             </select>
           </div>
           <div class="field"><label for="booking-date">Preferred date <span aria-hidden="true">*</span></label><input id="booking-date" name="preferredDate" type="date" required /></div>
-          <div class="field"><label for="booking-time">Preferred time <span aria-hidden="true">*</span></label><input id="booking-time" name="preferredTime" type="time" min="11:00" max="20:00" required /><small>Studio hours: 11:00 am–8:00 pm</small></div>
-          <div class="field field--wide"><label for="booking-idea">Tattoo idea <span class="optional">Optional</span></label><textarea id="booking-idea" name="tattooDescription" rows="4" placeholder="Style, placement, size, references, or the story behind it"></textarea></div>
+          <div class="field"><label for="booking-time">Preferred time <span aria-hidden="true">*</span></label><select id="booking-time" name="preferredTime" required><option value="" disabled selected>Choose a time</option>${timeOptions}</select><small>Monday to Saturday, 11:00 am–8:00 pm.</small></div>
         </div>
         <div class="form-status" data-form-status role="status" aria-live="polite"></div>
         <div class="booking-form__footer"><p>Submitting this form requests a consultation; it does not confirm an appointment.</p><button class="button button--primary" type="submit" data-submit-button>Request consultation</button></div>
@@ -172,7 +182,8 @@ function initializeBookingDialog() {
       returnFocusTarget = trigger;
       setStatus();
       dialog.showModal();
-      dialog.querySelector('input:not([type="hidden"])')?.focus();
+      form.scrollTop = 0;
+      dialog.querySelector('input:not([type="hidden"])')?.focus({ preventScroll: true });
     });
   });
 

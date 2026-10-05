@@ -3,12 +3,12 @@
   "short_name": "Shailly's Tattoo",
   "icons": [
     {
-      "src": "/favicon-96.png",
+      "src": "/favicon-circle-96.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "/logo-512.png",
+      "src": "/icon-circle-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }

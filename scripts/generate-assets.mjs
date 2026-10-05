@@ -5,25 +5,7 @@ const ink = '#11110f';
 const accent = '#5746d8';
 const brandLogo = await sharp('public/brand-logo.webp').toBuffer();
 
-async function createSquareLogo(size, output) {
-  const mark = await sharp(brandLogo)
-    .resize({ width: Math.round(size * 0.84), height: Math.round(size * 0.52), fit: 'inside' })
-    .png()
-    .toBuffer();
-
-  await sharp({
-    create: { width: size, height: size, channels: 4, background: canvas },
-  })
-    .composite([{ input: mark, gravity: 'centre' }])
-    .png({ compressionLevel: 9 })
-    .toFile(output);
-}
-
-await Promise.all([
-  createSquareLogo(96, 'public/favicon-96.png'),
-  createSquareLogo(180, 'public/apple-touch-icon.png'),
-  createSquareLogo(512, 'public/logo-512.png'),
-]);
+await import('./generate-icons.mjs');
 
 const ogPhoto = await sharp('public/images/new.webp')
   .resize({ width: 520, height: 630, fit: 'cover', position: 'centre' })
