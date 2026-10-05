@@ -1,0 +1,13 @@
+.scroll-reveal--pending {
+  opacity: 0;
+  transform: translateY(24px);
+  filter: blur(8px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal--pending {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}

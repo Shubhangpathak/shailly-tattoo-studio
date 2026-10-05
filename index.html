@@ -1,560 +1,434 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-IN">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shailly's Tattoo Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/src/styles/tokens.css" />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/layout.css" />
+    <link rel="stylesheet" href="/src/styles/components.css" />
+    <link rel="stylesheet" href="/src/styles/animations/scroll-reveal.css" />
+    <link rel="stylesheet" href="/src/styles/pages/home.css" />
+    <noscript><style>.deferred-image { display: none; }</style></noscript>
+    <title>Custom Tattoos in Mumbai & Raipur | Shailly's Tattoo Studio</title>
+    <meta
+      name="description"
+      content="Custom tattoos shaped around your story. Visit Shailly's Tattoo Studio in Mumbai or Raipur for thoughtful design, hygienic practice, and experienced artistry."
+    />
+    <meta name="author" content="Shailly's Tattoo Studio" />
+    <meta name="theme-color" content="#f6f3ec" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://shaillystattoo.com/" />
+    <link rel="icon" href="/favicon-96.png" type="image/png" sizes="96x96" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="preload"
+      href="/fonts/NeueMontreal-Regular.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
+    <link rel="preload" href="/images/hero-poster.webp" as="image" type="image/webp" />
 
-    
-    
-    <!-- Preload custom fonts to avoid slow network warnings -->
-    <link rel="preload" href="/fonts/NeueMontreal-Regular.otf" as="font" type="font/otf" crossorigin>
-    <link rel="preload" href="/fonts/NeueMontreal-Medium.otf" as="font" type="font/otf" crossorigin>
-    <link rel="preload" href="/fonts/NeueMontreal-Bold.otf" as="font" type="font/otf" crossorigin>
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:site_name" content="Shailly's Tattoo Studio" />
+    <meta property="og:title" content="Permanent art, made personal." />
+    <meta
+      property="og:description"
+      content="Custom tattoo design and experienced artistry in Mumbai and Raipur."
+    />
+    <meta property="og:url" content="https://shaillystattoo.com/" />
+    <meta property="og:image" content="https://shaillystattoo.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:alt" content="Shailly's Tattoo Studio custom tattoo artistry" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Permanent art, made personal." />
+    <meta
+      name="twitter:description"
+      content="Custom tattoo design and experienced artistry in Mumbai and Raipur."
+    />
+    <meta name="twitter:image" content="https://shaillystattoo.com/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Shailly's Tattoo Studio custom tattoo artistry" />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://www.google.com">
-    <link rel="preconnect" href="https://maps.googleapis.com">
-
-    <link rel="preload" as="image" href="/images/new-430.webp" imagesrcset="/images/new-430.webp 430w, /images/new-800.webp 800w" imagesizes="(max-width: 600px) 430px, 800px">
-    <link rel="preload" as="image" href="/images/new2-430.webp" imagesrcset="/images/new2-430.webp 430w, /images/new2-800.webp 800w" imagesizes="(max-width: 600px) 430px, 800px">
-
-    
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://shaillystattoo.com/#website",
+            "url": "https://shaillystattoo.com/",
+            "name": "Shailly's Tattoo Studio",
+            "publisher": { "@id": "https://shaillystattoo.com/#organization" },
+            "inLanguage": "en-IN"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://shaillystattoo.com/#organization",
+            "name": "Shailly's Tattoo Studio",
+            "url": "https://shaillystattoo.com/",
+            "logo": "https://shaillystattoo.com/logo-512.png",
+            "description": "Custom tattoo studio serving Mumbai and Raipur with personalised design, hygienic practice, and experienced artistry.",
+            "email": "shaillystattoostudio01@gmail.com",
+            "sameAs": [
+              "https://www.instagram.com/shaillystattoostudio",
+              "https://www.facebook.com/shailly.shrivastav",
+              "https://www.youtube.com/@shaillystattoostudio"
+            ]
+          },
+          {
+            "@type": "TattooParlor",
+            "@id": "https://shaillystattoo.com/#mumbai",
+            "name": "Shailly's Tattoo Studio Mumbai",
+            "url": "https://shaillystattoo.com/#locations",
+            "image": "https://shaillystattoo.com/images/new.webp",
+            "telephone": "+91-89621-63217",
+            "email": "shaillystattoostudio01@gmail.com",
+            "priceRange": "₹₹",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Shop No. 5, Wellington Building, Shastri Nagar Lane 2, Shastri Nagar",
+              "addressLocality": "Andheri West",
+              "addressRegion": "Maharashtra",
+              "postalCode": "400053",
+              "addressCountry": "IN"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 19.13878271524343,
+              "longitude": 72.82932013641393
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "11:00",
+              "closes": "20:00"
+            }
+          },
+          {
+            "@type": "TattooParlor",
+            "@id": "https://shaillystattoo.com/#raipur",
+            "name": "Shailly's Tattoo Studio Raipur",
+            "url": "https://shaillystattoo.com/#locations",
+            "image": "https://shaillystattoo.com/images/new2.webp",
+            "telephone": "+91-98261-98127",
+            "email": "shaillystattoostudio01@gmail.com",
+            "priceRange": "₹₹",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Shop No. 117, 1st Floor, Studio Apartment, Sector 1, Shankar Nagar",
+              "addressLocality": "Raipur",
+              "addressRegion": "Chhattisgarh",
+              "postalCode": "492007",
+              "addressCountry": "IN"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 21.253474380452605,
+              "longitude": 81.65973407503802
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "11:00",
+              "closes": "20:00"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
-  <body>
-    <div id="app"></div>
-    <section class="hero" id="hero">
-      <div class="hero-content">
-        <h1 class="hero-heading">Dedicated to <span>create</span> exceptional tattoos in  clean and  creative space </h1>
-        <button class="btn-primary main-hero-btn" id="openBookingModal">book an appointment</button>
-      </div>
-      <div class="hero-video-container">
-        <video class="hero-video" autoplay muted loop playsinline preload="none" poster="/hero-poster.webp">
-  <source src="/video.webm" type="video/webm">
-  <source src="/video.mp4" type="video/mp4">
-</video>
-      </div>
-      <button class="btn-primary hero-phone-btn" id="openBookingModal">book an appointment</button>
-    </section>
-    
-    
-    <section class="about" id="about">
-      <div class="about-container">
-        <h2 class="about-title">Our Story</h2>
-        <div class="about-content">
-          <p class="about-text">
-            At Shailly’s Tattoo Studio, we believe every tattoo tells a story—and we’re here to help you tell yours with creativity, care, and craftsmanship. Founded with a passion for meaningful body art, our studio blends traditional artistry with modern techniques to deliver tattoos that are both personal and timeless.
+  <body data-page="home">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div data-site-header></div>
+
+    <main id="main-content">
+      <section class="hero section-shell" aria-labelledby="hero-title">
+        <div class="hero__content">
+          <p class="eyebrow hero-reveal">Mumbai · Raipur · Since 2006</p>
+          <h1 id="hero-title">
+            <span class="hero-reveal">Permanent art,</span>
+            <em class="hero-reveal">made personal.</em>
+          </h1>
+          <p class="hero__intro hero-reveal">
+            Custom tattoos shaped around your story, created with thoughtful design,
+            experienced hands, and uncompromising care.
           </p>
-          <!-- <p class="about-text">
-            we at shailly's tattoo studio we have been making tattoos since 
-            1996, our passion for art and commitment to quality have made us 
-            a trusted haven for those daring enough to express their 
-            individuality.
-          </p> -->
-          <p class="about-text">
-            Whether it’s your first tattoo or your tenth, we focus on giving you a comfortable, safe, and inspiring experience. From custom designs to detailed consultations, we make sure every detail reflects your vision. Our commitment to hygiene, professionalism, and artistic excellence ensures that your trust in us is always well-placed.
-
-          </p>
-          <!-- <p class="about-text">
-            Our website is designed to be your first step into a world where 
-            creativity meets precision, offering an effortless way to book your 
-            appointment and explore our vibrant portfolio.
-          </p> -->
-          <p class="about-text">
-            Whether you're in <b> Raipur </b>or <b>Mumbai</b>, our digital space is a 
-            seamless blend of style, trust, and a sprinkle of that rebellious 
-            charm that only true art can inspire.We take pride in being more than just a tattoo studio—we’re a space where stories come to life, confidence grows, and individuality is celebrated.
-          </p>
-          <!-- <p class="about-text">
-            We take pride in being more than just a tattoo studio—we’re a space where stories come to life, confidence grows, and individuality is celebrated.
-          </p> -->
-        </div>
-      </div>
-    </section>
-    <section class="cta" id="cta">
-      <div class="cta-content">
-        <h2>Shailly's Tattoo Studio is where your ideas becomes permanent statements of self-expression</h2>
-        <button class="btn-primary">book an appointment</button>
-      </div>
-      <div class="cta-content2">
-        <p>we can make anything happen</p>
-      </div>
-    </section>
-
-    <!-- <section class="preview" id="preview"> -->
-      <!-- <div class="preview-container">
-        <h3>
-          We sit at <span>the intersection</span> of creative and performance.
-        </h3>
-        <button class="btn-primary"> View Portfolio</button>
-      </div> -->
-      <!-- <div class="preview-img">
-        <img src="/images/new.png" alt="client picture">
-        <img src="/images/new2.png" alt="client picture">
-      </div> -->
-    <!-- </section> -->
-
-    <section class="gallery-section">
-      <div class="preview-container">
-        <h3>
-          We sit at <span>the intersection</span> of creative and performance.
-        </h3>
-        <button class="btn-primary" onclick="location.href='gallery.html'"> View Gallery</button>
-      </div>
-      <!-- <div class="gallery-header">
-        <h3 class="gallery-title">Real Art. <span>Real Skin.</span></h3>
-        <a href="#" class="btn-primary">
-          Explore More >>
-        </a> -->
-        <!-- <a href="#" class="explore-more">
-          Explore More
-          <img src="/icons/bx-chevron-right.svg" alt="Explore">
-        </a> -->
-      <!-- </div> -->
-      <button class="scroll-btn scroll-left" onclick="scrollGallery(-1)">
-        <img src="/icons/bx-chevron-right.svg" style="transform: rotate(180deg);" alt="Left">
-      </button>
-      
-      <div class="gallery-container" id="gallery">
-        <img class="gallery-image" src="/images/new.webp"
-     sizes="(max-width: 600px) 480px, 800px" alt="new Tattoo 1">
-        <img class="gallery-image" src="/images/new2.webp"  sizes="(max-width: 600px) 480px, 800px" alt="new Tattoo 1">
-        <img class="gallery-image" src="/images/img5.webp"  sizes="(max-width: 600px) 480px, 800px" alt="Tattoo 4">
-        <img class="gallery-image" src="/images/img1.png" sizes="(max-width: 600px) 480px, 800px"  alt="Tattoo 1">
-        <img class="gallery-image" src="/images/img2.webp" loading="lazy"  sizes="(max-width: 600px) 480px, 800px" alt="Tattoo 2">
-        <img class="gallery-image" src="/images/img4.webp" loading="lazy" sizes="(max-width: 600px) 480px, 800px" alt="Tattoo 3">
-        <img class="gallery-image" src="/images/img6.webp" loading="lazy" sizes="(max-width: 600px) 480px, 800px" alt="Tattoo 4">
-        <img class="gallery-image" src="/images/img7.webp" loading="lazy" sizes="(max-width: 600px) 480px, 800px" alt="Tattoo 4">
-        <img class="gallery-image" src="/images/img8.webp" loading="lazy" sizes="(max-width: 600px) 480px, 800px" alt="Tattoo 4">
-        <img class="gallery-image" src="/images/img9.webp" loading="lazy" sizes="(max-width: 600px) 480px, 800px" alt="Tattoo 4">
-      </div>
-      <button class="scroll-btn scroll-right" onclick="scrollGallery(1)">
-        <img src="/icons/bx-chevron-right.svg" alt="Right">
-      </button>
-      <div class="gallery-button-for-phone">
-        
-        <!-- <button class="explore-btn">Explore All</button> -->
-      </div>
-    </section>
-
-    <section class="stats-section">
-      <div class="stats-container">
-        <div class="stat-item">
-          <span class="stat-icon">★</span>
-          <h2 class="stat-number">24000+</h2>
-          <p class="stat-description">unique tattoos created</p>
-        </div>
-        
-        <div class="stat-item">
-          <span class="stat-icon">★</span>
-          <h2 class="stat-number">19</h2>
-          <p class="stat-description">years of experience</p>
-        </div>
-        
-        <div class="stat-item">
-          <span class="stat-icon">★</span>
-          <h2 class="stat-number">98%</h2>
-          <p class="stat-description">client satisfaction rate</p>
-        </div>
-        
-        <div class="stat-item">
-          <span class="stat-icon">★</span>
-          <h2 class="stat-number">2</h2>
-          <p class="stat-description">studio locations</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="pricing-container" id="price">
-      <div class="preview-container">
-        <h3>
-          Transparent <span>pricing</span> tailored to your unique tattoo project
-        </h3>
-        <button class="btn-primary get-quote-btn" id="openBookingModal"> Get Quote</button>
-      </div>
-
-      <div class="pricing-grid">
-          <!-- Small Tattoos Card -->
-          <div class="pricing-card">
-              <h3 class="card-title">Small & Minimal Tattoos</h3>
-              <p class="pricing-type">Size based</p>
-              <p class="price">₹1000 - ₹1200</p>
-              <p class="price-unit"><b>per square inch</b></p>
-              <p class="description">Ideal for minimalist designs and first-time tattoos, offering a perfect balance of simplicity and elegance, making it an excellent choice for any tattoo enthusiast.</p>
-              
-              <div class="price-breakdown">
-                  <div class="price-item">
-                      <span>Quick sessions (1-2 hours)</span>
-                  </div>
-                  <div class="price-item">
-                      <span>Perfect for beginners</span>
-                  </div>
-                  <div class="price-item">
-                      <span>Simple, clean designs</span>
-                  </div>
-                  <div class="price-item">
-                      <span><b>Minimum is ₹1500</b></span>
-                  </div>
-              </div>
+          <div class="button-group">
+            <button class="button button--primary hero-reveal" type="button" data-booking-trigger>
+              Book a consultation
+            </button>
+            <a class="button button--secondary hero-reveal" href="/gallery.html">Explore our work</a>
           </div>
-          
-          <!-- Medium Tattoos Card -->
-          <div class="pricing-card">
-              <h3 class="card-title">Medium sized Tattoos</h3>
-              <p class="pricing-type">Size based</p>
-              <p class="price">₹1,300 - ₹2,000</p>
-              <p class="price-unit"><b>per square inch</b></p>
-              <p class="description">The cost of medium-sized tattoos that take more than 3 hours to complete varies based on the artist's level of skill and the intricacy of the design.</p>
-              
-              <div class="price-breakdown">
-                  <div class="price-item">
-                      <span>Moderate sessions (3-5 hours)</span>
-                  </div>
-                  <div class="price-item">
-                      <span>Custom design consultation</span>
-                  </div>
-                  <div class="price-item">
-                      <span>Color options available</span>
-                  </div>
-                  <div class="price-item">
-                      <span>Detailed shading & linework</span>
-                  </div>
-              </div>
+          <ul class="hero__assurances" aria-label="Studio commitments">
+            <li class="hero-reveal">Custom designs</li>
+            <li class="hero-reveal">Hygienic studio</li>
+            <li class="hero-reveal">Personal aftercare</li>
+          </ul>
+        </div>
+
+        <div class="hero__media hero-reveal">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="/images/hero-poster.webp"
+            width="1080"
+            height="1350"
+            aria-label="Tattoo artist at work in Shailly's Tattoo Studio"
+          >
+            <source src="/video.mp4" type="video/mp4" />
+          </video>
+          <div class="hero__media-note" aria-hidden="true">
+            <span>01</span>
+            <p>Designed for you.<br />Made to stay.</p>
           </div>
-          
-          <!-- Large Tattoos Card -->
-          <div class="pricing-card">
-              <h3 class="card-title">Large & detailed Tattoos</h3>
-              <p class="pricing-type">Session based</p>
-              <p class="price">₹2,000 - ₹,2,500</p>
-              <p class="price-unit"><b>per square inch</b></p>
-              <p class="description">Larger tattoos requiring 6+ hours of work. Charged per full-day session (6-8 hours). Rates vary based on the design's complexity and the artist's expertise.</p>
-              
-              <div class="price-breakdown">
-                  <div class="price-item">
-                      <span>Full-day sessions (6-8 hours)</span>
-                  </div>
-                  <div class="price-item">
-                      <span>Complex custom designs</span>
-                  </div>
-                  <div class="price-item">
-                      <span>Advanced techniques & styles</span>
-                  </div>
-                  <div class="price-item">
-                      <span>Unlimited design revisions</span>
-                  </div>
-              </div>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Studio highlights">
+        <div class="stats__grid section-shell">
+          <div class="stat"><strong>24,000+</strong><span>Tattoos created</span></div>
+          <div class="stat"><strong>19</strong><span>Years of experience</span></div>
+          <div class="stat"><strong>98%</strong><span>Client satisfaction</span></div>
+          <div class="stat"><strong>2</strong><span>Open studios</span></div>
+        </div>
+      </section>
+
+      <section class="section home-section work" id="work" aria-labelledby="work-title">
+        <div class="section-shell">
+        <div class="section-heading scroll-reveal">
+          <div>
+            <p class="eyebrow">Selected work</p>
+            <h2 id="work-title">Real stories.<br /><em>Drawn in ink.</em></h2>
           </div>
-      </div>
-      
-      <!-- <div class="pricing-details">
-          <p>Final pricing depends on the size, placement, and level of detail in your design. Contact us for a personalized consultation and quote. We're dedicated to making your tattoo vision a reality while ensuring quality and safety.</p>
-      </div> -->
-    </section>
-
-    <section class="testimonials-section">
-      <div class="testimonials-container">
-          <div class="reviews" id="reviews">
-              <div class="review-track">
-                  <div class="review-card">
-                      <p class="testimonial-text">"One if the best Tattoo places to get inked in chhattisgarh. Had a great experience. Tattoo for them is not a job for them but an emotion which they are really passionate about. Must visit once if you are thinking to get a tatoo. This was my third Tattoo and i felt I should have come earlier to get my other 2 tattoos as well. One of the most professional and skilled tattoo artist. Kudos & Prochnost"</p>
-                      <div class="client-info">
-                          <span class="client-name">SHIVANG GOVIND</span>
-                          <span class="client-detail">Repeat Client</span>
-                      </div>
-                  </div>
-                  
-                  <div class="review-card">
-                      <p class="testimonial-text">"Mr shaily is highly professional and a great tattoo artist he provide clear insight to your vision of your choice of art recently got my second tattoo,Loved the experience just visit studio for him only."</p>
-                      <div class="client-info">
-                          <span class="client-name">SAURABH GOSWAMI</span>
-                          <span class="client-detail">Repeat Client</span>
-                      </div>
-                  </div>
-                  
-                  <div class="review-card">
-                      <p class="testimonial-text">"I was anxious about my first tattoo but Shailly ji guided me on every step and helped me chose a design. Highly recommended place."</p>
-                      <div class="client-info">
-                          <span class="client-name">Chetan</span>
-                          <span class="client-detail">First-time Client</span>
-                      </div>
-                  </div>
-
-                  <div class="review-card">
-                      <p class="testimonial-text">"The tattoo maker is highly professional and has a clear mindset of what he is going to do which is a bit convincing thing to consider giving a visit to this tattoo store. The rates will vary according to the design, density and length."</p>
-                      <div class="client-info">
-                          <span class="client-name">Anand Shingwekar</span>
-                          <span class="client-detail">Client</span>
-                      </div>
-                  </div>
-
-                  <div class="review-card">
-                      <p class="testimonial-text">"The experience was awesome. As it's my second tattoo from here. Behaviour of the staff is also awesome. The safest place for tattoo making."</p>
-                      <div class="client-info">
-                          <span class="client-name">Jayanti Trivedi</span>
-                          <span class="client-detail">Repeat Client</span>
-                      </div>
-                  </div>
-
-                  <div class="review-card">
-                      <p class="testimonial-text">"Got my first ever tattoo done at Shaily's. I honestly couldn't have asked for a better experience. Rishi and the entire staff at the studio made the process so seamless and so comfortable that I have already picked 3 other tattoos that I am going to get done. Right from the courteous nature to the tattoo making process, it was a bliss."</p>
-                      <div class="client-info">
-                          <span class="client-name">Sukriti Hora</span>
-                          <span class="client-detail">First-time Client</span>
-                      </div>
-                  </div>
-
-                  <!-- Duplicate cards for infinite scroll -->
-                  <div class="review-card">
-                      <p class="testimonial-text">"Amazing time spent.... From styling to the end of process... Time well spent. The studio is big, bright & clean."</p>
-                      <div class="client-info">
-                          <span class="client-name">naman kunhappan</span>
-                          <span class="client-detail">Client</span>
-                      </div>
-                  </div>
-                  
-                  <div class="review-card">
-                      <p class="testimonial-text">"First time for this place to highlight and edit my 5 year old tatoo. It was amazing experience. Artist Rishi made me understand throughly about the design and worked on it perfectly. A master for his passion i guess. 5 Stars for this time."</p>
-                      <div class="client-info">
-                          <span class="client-name">Ravi Shirke</span>
-                          <span class="client-detail">Client</span>
-                      </div>
-                  </div>
-                  
-                  <div class="review-card">
-                      <p class="testimonial-text">"This was my 1st visit at Shaillys Tattoo Studio, I got a Tattoo done by Rishi. He advised various designs. Did the job with true professionalism and with utmost care. The studio is big, bright & clean."</p>
-                      <div class="client-info">
-                          <span class="client-name">Dipesh Gurjar</span>
-                          <span class="client-detail">First-time Client</span>
-                      </div>
-                  </div>
-              </div>
+          <div class="work__actions">
+            <div class="work__controls" aria-label="Featured work controls">
+              <button class="icon-button" type="button" data-work-previous aria-label="View previous tattoo">←</button>
+              <button class="icon-button" type="button" data-work-next aria-label="View next tattoo">→</button>
+            </div>
+            <a class="text-link" href="/gallery.html">View the full gallery <span aria-hidden="true">↗</span></a>
           </div>
-      </div>
-  </section>
+        </div>
+        <div class="featured-grid" data-work-rail tabindex="0" aria-label="Featured tattoo work">
+          <figure class="featured-card scroll-reveal">
+            <img class="deferred-image" data-src="/images/new.webp" alt="Client with a fine-line script tattoo near her collarbone" width="1080" height="1350" decoding="async" />
+            <noscript><img src="/images/new.webp" alt="Client with a fine-line script tattoo near her collarbone" width="1080" height="1350" decoding="async" /></noscript>
+          </figure>
+          <figure class="featured-card scroll-reveal">
+            <img class="deferred-image" data-src="/images/new2.webp" alt="Large blackwork sleeve and shoulder tattoo" width="1080" height="1350" decoding="async" />
+            <noscript><img src="/images/new2.webp" alt="Large blackwork sleeve and shoulder tattoo" width="1080" height="1350" /></noscript>
+          </figure>
+          <figure class="featured-card scroll-reveal">
+            <img class="deferred-image" data-src="/images/img5.webp" alt="Geometric chakra and bird tattoo on a forearm" width="1080" height="1350" decoding="async" />
+            <noscript><img src="/images/img5.webp" alt="Geometric chakra and bird tattoo on a forearm" width="1080" height="1350" /></noscript>
+          </figure>
+          <figure class="featured-card scroll-reveal">
+            <img class="deferred-image" data-src="/images/img7.webp" alt="Minimal custom lettering tattoo on a forearm" width="1080" height="1350" decoding="async" />
+            <noscript><img src="/images/img7.webp" alt="Minimal custom lettering tattoo on a forearm" width="1080" height="1350" /></noscript>
+          </figure>
+        </div>
+        </div>
+      </section>
 
-
-    <section class="faq-section">  
-      <div class="faq-container">
-        <div class="faq-content-wrapper">
-          <div class="faq-header">
-            <h2 class="faq-title">Frequently <br><span>Asked Questions</span></h2>
-            <p class="faq-subtitle">Here are some frequently asked questions with answers to clarify doubts.</p>
+      <section class="story section home-section" id="about" aria-labelledby="story-title">
+        <div class="story__grid section-shell">
+          <div class="story__media scroll-reveal">
+            <img class="deferred-image" data-src="/images/img9.webp" alt="Infinity and feather tattoo on a forearm" width="1080" height="1350" decoding="async" />
+            <noscript><img src="/images/img9.webp" alt="Infinity and feather tattoo on a forearm" width="1080" height="1350" /></noscript>
           </div>
-          
-          <div class="faq-items">
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>What is the tattoo process like?</h3>
-              <div class="faq-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          <div class="story__content scroll-reveal">
+            <p class="eyebrow">Our story</p>
+            <h2 id="story-title">Your idea deserves more than a template.</h2>
+            <p class="lead">
+              Every tattoo begins with listening. We translate your references,
+              memories, and meaning into work that feels unmistakably yours.
+            </p>
+            <p>
+              Whether it is your first tattoo or your tenth, our focus remains the same:
+              a calm consultation, considered design, a clean studio, and precise execution.
+              From Mumbai to Raipur, we create a comfortable space where individuality is celebrated.
+            </p>
+            <ol class="process-list">
+              <li><span>01</span><div><strong>Consult</strong><p>Share the idea, placement, scale, and references.</p></div></li>
+              <li><span>02</span><div><strong>Design</strong><p>Shape a custom composition around your vision.</p></div></li>
+              <li><span>03</span><div><strong>Create</strong><p>Tattoo with care, precision, and clear aftercare guidance.</p></div></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="pricing-section section home-section" id="pricing" aria-labelledby="pricing-title">
+        <div class="section-shell">
+        <div class="pricing-intro scroll-reveal">
+          <div>
+            <p class="eyebrow">Pricing guide</p>
+            <h2 id="pricing-title">Pricing, made clear.</h2>
+          </div>
+          <div class="pricing-intro__aside">
+            <p>Final pricing depends on size, placement, detail, colour, and session time. We confirm the complete quote after consultation.</p>
+            <button class="button button--primary" type="button" data-booking-trigger>Request a quote</button>
+          </div>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card scroll-reveal">
+            <h3>Small & minimal tattoos</h3>
+            <p class="price-card__type">Size based</p>
+            <p class="price-card__price">₹1,000–₹1,200</p>
+            <p class="price-card__unit">Per square inch</p>
+            <p>Ideal for minimalist designs and first tattoos, balancing simplicity with a clean, considered finish.</p>
+            <ul><li>Quick sessions: 1–2 hours</li><li>Ideal for first tattoos</li><li>Simple, clean designs</li><li><strong>Minimum charge ₹1,500</strong></li></ul>
+          </article>
+          <article class="price-card scroll-reveal">
+            <h3>Medium-sized tattoos</h3>
+            <p class="price-card__type">Size based</p>
+            <p class="price-card__price">₹1,300–₹2,000</p>
+            <p class="price-card__unit">Per square inch</p>
+            <p>For custom work taking more than three hours, with pricing shaped by detail, technique, and design complexity.</p>
+            <ul><li>Moderate sessions: 3–5 hours</li><li>Custom design consultation</li><li>Colour options available</li><li>Detailed shading and linework</li></ul>
+          </article>
+          <article class="price-card scroll-reveal">
+            <h3>Large & detailed tattoos</h3>
+            <p class="price-card__type">Session based</p>
+            <p class="price-card__price">₹2,000–₹2,500</p>
+            <p class="price-card__unit">Per square inch</p>
+            <p>Complex, high-detail tattoos planned across extended or full-day sessions according to the final composition.</p>
+            <ul><li>Full-day sessions: 6–8 hours</li><li>Complex custom designs</li><li>Advanced techniques and styles</li><li>Session planning included</li></ul>
+          </article>
+        </div>
+        </div>
+      </section>
+
+      <section class="testimonials section home-section" aria-labelledby="testimonials-title">
+        <div class="section-shell">
+          <div class="testimonial-header scroll-reveal">
+            <div><p class="eyebrow">Client stories</p><h2 id="testimonials-title">What clients say.</h2></div>
+            <p>Real experiences from first tattoos, repeat visits, and everything in between.</p>
+          </div>
+          <div class="testimonial-viewport" tabindex="0" aria-label="Client reviews">
+            <div class="testimonial-track">
+              <div class="testimonial-group">
+                <blockquote>
+                  <p>“Tattoo is not just a job for them, but an emotion they are genuinely passionate about. This was my third tattoo, and the experience was great.”</p>
+                  <footer><strong>Shivang Govind</strong><span>Repeat client</span></footer>
+                </blockquote>
+                <blockquote>
+                  <p>“Shailly is highly professional and provides clear insight into your vision. I recently got my second tattoo and loved the experience.”</p>
+                  <footer><strong>Saurabh Goswami</strong><span>Repeat client</span></footer>
+                </blockquote>
+                <blockquote>
+                  <p>“I was anxious about my first tattoo, but Shailly ji guided me through every step and helped me choose a design. Highly recommended.”</p>
+                  <footer><strong>Chetan</strong><span>First-time client</span></footer>
+                </blockquote>
+                <blockquote>
+                  <p>“The artist was professional and clear about the process. The rates were explained according to the design, density, and size.”</p>
+                  <footer><strong>Anand Shingwekar</strong><span>Client</span></footer>
+                </blockquote>
+                <blockquote>
+                  <p>“The experience was awesome. This was my second tattoo here, and the staff were wonderful. It felt like a safe place for tattoo making.”</p>
+                  <footer><strong>Jayanti Trivedi</strong><span>Repeat client</span></footer>
+                </blockquote>
+                <blockquote>
+                  <p>“Rishi and the entire team made the process seamless and comfortable. I could not have asked for a better first tattoo experience.”</p>
+                  <footer><strong>Sukriti Hora</strong><span>First-time client</span></footer>
+                </blockquote>
               </div>
             </div>
-            <div class="faq-answer">
-              <p>Our tattoo process begins with a consultation to discuss your design ideas, placement, and size. We then create a custom design based on your input. On the day of your appointment, we'll prepare the area, transfer the design, and begin tattooing. Throughout the process, we prioritize your comfort and ensure a sterile environment.</p>
-            </div>
           </div>
-          <!-- abcd -->
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>How do I care for my new tattoo?</h3>
-              <div class="faq-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+      </section>
+
+      <section class="section home-section section-shell faq" id="faq" aria-labelledby="faq-title">
+        <div class="section-heading scroll-reveal">
+          <div><p class="eyebrow">Good to know</p><h2 id="faq-title">Before you<br /><em>get inked.</em></h2></div>
+          <p class="section-heading__copy">Straight answers to the questions we hear most often.</p>
+        </div>
+        <div class="faq__list">
+          <details class="scroll-reveal">
+            <summary><span>What is the tattoo process like?</span><span aria-hidden="true">+</span></summary>
+            <p>We begin with a consultation about your idea, placement, and size. After the design is agreed, we prepare the area, transfer the stencil, and tattoo in a sterile environment while checking your comfort throughout.</p>
+          </details>
+          <details class="scroll-reveal">
+            <summary><span>How do I care for a new tattoo?</span><span aria-hidden="true">+</span></summary>
+            <p>Keep it protected for the period your artist recommends, wash gently with mild soap, pat dry, and use the recommended aftercare. Avoid swimming, soaking, scratching, and direct sunlight while it heals.</p>
+          </details>
+          <details class="scroll-reveal">
+            <summary><span>Can a tattoo cover a scar?</span><span aria-hidden="true">+</span></summary>
+            <p>Often, yes—but it depends on the scar's age, type, and condition. It should be fully healed. An artist will assess it in person and recommend the safest approach.</p>
+          </details>
+          <details class="scroll-reveal">
+            <summary><span>How much will my tattoo cost?</span><span aria-hidden="true">+</span></summary>
+            <p>Pricing depends on size, detail, placement, colour, and session time. The guide above is a starting point; we provide a clear quote after understanding your design.</p>
+          </details>
+          <details class="scroll-reveal">
+            <summary><span>Do tattoos hurt?</span><span aria-hidden="true">+</span></summary>
+            <p>Sensitivity varies by person and placement. Most clients describe it as uncomfortable but manageable, and our artists work carefully to keep the experience as comfortable as possible.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="locations section home-section" id="locations" aria-labelledby="locations-title">
+        <div class="section-shell">
+          <div class="section-heading scroll-reveal">
+            <div><p class="eyebrow">Visit the studio</p><h2 id="locations-title">Find us in<br /><em>three locations.</em></h2></div>
+            <p class="section-heading__copy">Our Andheri West and Raipur studios are open Monday to Saturday, 11:00 am–8:00 pm. Appointments are recommended.</p>
+          </div>
+          <div class="location-grid">
+            <article class="location-card scroll-reveal">
+              <div><p class="location-card__city">Mumbai</p><p>Andheri West · Maharashtra</p></div>
+              <address>Shop No. 5, Wellington Building, Shastri Nagar Lane 2, Shastri Nagar, Andheri West, Mumbai 400053</address>
+              <div class="location-card__links">
+                <a href="tel:+918962163217">+91 89621 63217</a>
+                <a href="https://maps.app.goo.gl/kVwbSr3VnmfuCZke6" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a>
               </div>
-            </div>
-            <div class="faq-answer">
-              <p>After getting your tattoo, keep it covered for the first few hours. Gently wash with mild soap, pat dry, and apply a thin layer of recommended ointment. Avoid direct sunlight, swimming, and soaking for at least 2 weeks. Don't pick at scabs or scratch the area. Follow our detailed aftercare instructions for best results.</p>
-            </div>
-          </div>
-          
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>Can I get a tattoo over a scar?</h3>
-              <div class="faq-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </article>
+            <article class="location-card location-card--new-studio scroll-reveal">
+              <div><p class="location-card__city">Mumbai</p><p>Powai · Maharashtra</p></div>
+              <p class="location-card__status">New Studio</p>
+              <address>Shop No. 112, 1st Floor, Galleria Mall, Hiranandani Gardens, Powai, Mumbai 400076</address>
+              <div class="location-card__links">
+                <a href="tel:+919399951345">+91 93999 51345</a>
+                <button type="button" data-powai-trigger aria-haspopup="dialog">Get directions <span aria-hidden="true">↗</span></button>
               </div>
-            </div>
-            <div class="faq-answer">
-              <p>Yes, in many cases tattoos can be done over scars. However, it depends on the scar's age, type, and condition. Scars should be at least 1-2 years old and fully healed. Our artists will assess your specific situation during a consultation and recommend the best approach for your scar coverage tattoo.</p>
-            </div>
-          </div>
-          
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>How much does a tattoo cost?</h3>
-              <div class="faq-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </article>
+            <article class="location-card scroll-reveal">
+              <div><p class="location-card__city">Raipur</p><p>Shankar Nagar · Chhattisgarh</p></div>
+              <address>Shop No. 117, 1st Floor, Studio Apartment, Sector 1, Shankar Nagar, Raipur 492007</address>
+              <div class="location-card__links">
+                <a href="tel:+919826198127">+91 98261 98127</a>
+                <a href="https://maps.app.goo.gl/HEmic6C7RjQN52386" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a>
               </div>
-            </div>
-            <div class="faq-answer">
-              <p>Tattoo pricing varies based on size, detail, placement, and the artist's experience. Small tattoos typically range from ₹1,000-₹3,000, medium tattoos from ₹4,000-₹8,000 per hour, and large pieces can cost ₹24,000-₹1,80,000 for full sessions. We provide detailed pricing information in our pricing section above.</p>
-            </div>
-          </div>
-          
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>Do tattoos hurt?</h3>
-              <div class="faq-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-              </div>
-            </div>
-            <div class="faq-answer">
-              <p>Pain levels vary from person to person and depend on the tattoo's location. Areas with thin skin and less fat (like ribs, spine, ankles) tend to be more sensitive. Most clients describe the sensation as uncomfortable but manageable. Our artists work to make the experience as comfortable as possible.</p>
-            </div>
+            </article>
           </div>
         </div>
+      </section>
+
+      <dialog class="location-dialog" data-powai-dialog aria-labelledby="powai-dialog-title" aria-describedby="powai-dialog-message">
+        <h2 id="powai-dialog-title">Announcement</h2>
+        <p class="location-dialog__notice" id="powai-dialog-message"><strong>Google Maps listing is currently being verified.</strong></p>
+        <p>We’ll add directions here as soon as the listing is live.</p>
+        <p>If you have trouble finding the location, please call us directly at <a href="tel:+919399951345">+91 93999 51345</a>.</p>
+        <p class="location-dialog__thanks">Thanks for your understanding.</p>
+        <button class="button button--primary" type="button" data-powai-close>Got it</button>
+      </dialog>
+
+      <section class="final-cta" aria-labelledby="final-cta-title">
+        <div class="section-shell final-cta__inner scroll-reveal">
+          <p class="eyebrow">Your next piece</p>
+          <h2 id="final-cta-title">Bring us the idea.<br /><em>Leave with your story.</em></h2>
+          <button class="button button--light" type="button" data-booking-trigger>Start a consultation</button>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <section class="findus container section" id="findus">
-      <h2 class="findus-title">Find us</h2>
-      <div class="findus-img-container">
-        <div class="find-img1">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d432.89440519663634!2d72.82932013641393!3d19.13878271524343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63d47cd2ff7%3A0x5787e96dad2abc73!2sShailly&#39;s%20Tattoo%20Studio!5e0!3m2!1sen!2sin!4v1732447301210!5m2!1sen!2sin" width="467" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <h3 class="find-subhead">Mumbai</h3>
-          <div class="location-contact-info">
-            <p class="location-address">shop no 5, wellington building, Shastri Nagar Lane 2, Shastri Nagar, Andheri West, Mumbai, Maharashtra 400053</p>
-            <p class="location-phone"><img src="/icons/bx-phone.svg" alt="Phone Icon" class="info-icon" /> +91 8962163217</p>
-          </div>
-          <button class="find-btn" onclick="window.location='https://maps.app.goo.gl/kVwbSr3VnmfuCZke6'" target="_blank"><img src="/icons/bx-map.svg" alt="Map Icon" class="btn-icon" />Get direction</button>
-        </div>
-        <div class="find-img2">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.45437643554!2d81.65973407503802!3d21.253474380452605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dd694a5d2581%3A0x288440e0cb58cfff!2z8J2XpvCdl7XwnZeu8J2XtvCdl7nwnZe58J2YhifwnZiAIPCdl6fwnZeu8J2YgfCdmIHwnZe88J2XvCDwnZiA8J2YgfCdmILwnZex8J2XtvCdl7w!5e0!3m2!1sen!2sin!4v1732446905924!5m2!1sen!2sin" width="467" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <h3 class="find-subhead">Raipur</h3>
-          <div class="location-contact-info">
-            <p class="location-address">
-              shop no117 1st floor, studio apratment, Sector 1, Shankar Nagar, Raipur, Chhattisgarh 492007</p>
-            <p class="location-phone"><img src="/icons/bx-phone.svg" alt="Phone Icon" class="info-icon" /> +91 9826198127</p>
-          </div>
-          <button class="find-btn" onclick="window.location='https://maps.app.goo.gl/HEmic6C7RjQN52386'" target="_blank"><img src="/icons/bx-map.svg" alt="Map Icon" class="btn-icon" />Get direction</button>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-logo-section">
-          <!-- <div class="footer-logo">
-            <img src="/logo.png" alt="Shailly's Tattoo Studio">
-          </div> -->
-          <!-- <p class="footer-tagline">Where your ideas become permanent statements of self-expression</p> -->
-        </div>
-        
-        <div class="footer-content">
-          <div class="footer-nav">
-            <h3>Navigate <span class="star-icon">★</span></h3>
-            <ul>
-              <li><a href="#hero">Home</a></li>
-              <li><a href="#gallery">Gallery</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#pricing-container">Pricing</a></li>
-              <li><a href="#findus">Locations</a></li>
-            </ul>
-          </div>
-          
-          <div class="footer-contact">
-            <h3>Contact Us <span class="star-icon">★</span></h3>
-            <ul>
-              <li><a href="tel:+919988776655">Mumbai: +91 8962163217</a></li>
-              <li><a href="tel:+919876543210">Raipur: +91 9826198127</a></li>
-              <li><a href="mailto:shaillystatttoo@gmail.com">shaillystatttoo@gmail.com</a></li>
-            </ul>
-          </div>
-          
-          <div class="footer-social">
-            <h3>Follow Us <span class="star-icon">★</span></h3>
-            <div class="social-icons">
-              <a href="https://www.instagram.com/shaillystattoostudio?igsh=M2dma3ZlZXFvbGd4&utm_source=qr" class="social-icon" target="_blank" rel="noopener noreferrer"><img src="/icons/instagram.svg" alt="Instagram"></a>
-              <a href="https://www.facebook.com/shailly.shrivastav?mibextid=wwXIfr&rdid=ZkurYelHlE4CVgcH&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1EHoaE7oU4%2F%3Fmibextid%3DwwXIfr#" class="social-icon" target="_blank" rel="noopener noreferrer"><img src="/icons/facebook.svg" alt="Facebook"></a>
-              <a href="https://www.youtube.com/@shaillystattoostudio" class="social-icon" target="_blank" rel="noopener noreferrer"><img src="/icons/bxl-youtube.svg" alt="YouTube"></a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="footer-bottom">
-          <div class="copyright">
-            <p>&copy; 2023 Shailly's Tattoo Studio. All rights reserved.</p>
-          </div>
-          <div class="footer-decoration">
-            <span class="star-icon">★</span>
-            <span class="star-icon">★</span>
-            <span class="star-icon">★</span>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <div class="sticky-widgets">
-      <a href="https://g.co/kgs/CTvmDtn" target="_blank" class="widget google-widget">
-          <svg class="widget-icon" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81z"/>
-          </svg>
-          <div class="rating">4.8</div>
-          <small>Reviews</small>
-      </a>
-
-      <a href="https://wa.me/919399951345" target="_blank" class="widget whatsapp-widget">
-          <svg class="widget-icon" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
-      </a>
-  </div>
-  <div id="bookingModal" class="modal-backdrop">
-    <div class="modal-content">
-        <span class="close-modal-btn" id="closeBookingModal">&times;</span>
-        <form id="tattooBookingForm" class="booking-form">
-            <h2>Book Your Tattoo Appointment</h2>
-
-            <input type="hidden" name="access_key" value="537eb431-be83-4838-ab49-5b346fba20a0">
-
-            <div class="form-group">
-                <label for="fullName">Full Name <span style="color:red;">*</span></label>
-                <input type="text" id="fullName" name="fullName" required>
-            </div>
-
-            <div class="form-group">
-                <label for="phone">Phone Number <span style="color:red;">*</span></label>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" title="Please enter a valid phone number (10-15 digits)" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email Address <span style="color:red;">*</span></label>
-                <input type="email" id="email" name="email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="location">Choose Location <span style="color:red;">*</span></label>
-                <select id="location" name="location" required>
-                    <option value="" disabled selected>Select a location</option>
-                    <option value="raipur">Raipur</option>
-                    <option value="mumbai">Mumbai</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="preferredDate">Preferred Date <span style="color:red;">*</span></label>
-                <input type="date" id="preferredDate" name="preferredDate" required>
-            </div>
-
-            <!-- <div class="form-group">
-                <label for="preferredTime">Preferred Time Slot <span style="color:red;">*</span></label>
-                <input type="time" id="preferredTime" name="preferredTime" required>
-            </div> -->
-
-            <div class="form-group">
-                <label for="tattooDescription">Tattoo Description/Idea <span class="optional-label">(Optional)</span></label>
-                <textarea id="tattooDescription" name="tattooDescription" rows="4"></textarea>
-            </div>
-
-            <button type="submit" class="submit-btn">Request Appointment</button>
-        </form>
-    </div>
-</div>
-
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-    <script type="module" src="/src/main.js"></script>
-    <script src="/src/gallery.js"></script>
+    <div data-site-footer></div>
+    <div data-booking-dialog></div>
+    <script type="module" src="/src/pages/home.js"></script>
   </body>
 </html>

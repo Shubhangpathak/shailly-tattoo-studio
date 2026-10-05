@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('/fonts/NeueMontreal-Regular.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('/fonts/NeueMontreal-Medium.otf') format('opentype');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('/fonts/NeueMontreal-Bold.otf') format('opentype');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --canvas: #f6f3ec;
+  --surface: #fffdfa;
+  --ink: #11110f;
+  --muted: #68645d;
+  --line: #d8d2c7;
+  --accent: #5746d8;
+  --accent-dark: #4132b4;
+  --success: #237a4b;
+  --error: #b42318;
+  --white: #ffffff;
+  --font-sans: 'Neue Montreal', Arial, sans-serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: clamp(1.1rem, 1.6vw, 1.3rem);
+  --display-sm: clamp(2.4rem, 5.5vw, 5.25rem);
+  --display-lg: clamp(3.5rem, 8.8vw, 8.25rem);
+  --radius-sm: 0.625rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 0 rgb(17 17 15 / 0.06), 0 10px 30px rgb(17 17 15 / 0.05);
+  --shadow-lg: 0 24px 80px rgb(17 17 15 / 0.18);
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+}

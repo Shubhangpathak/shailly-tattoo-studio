@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://shaillystattoo.com/</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://shaillystattoo.com/gallery.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://shaillystattoo.com/images/new.webp</image:loc></image:image>
+    <image:image><image:loc>https://shaillystattoo.com/images/new2.webp</image:loc></image:image>
+    <image:image><image:loc>https://shaillystattoo.com/images/img2.webp</image:loc></image:image>
+    <image:image><image:loc>https://shaillystattoo.com/images/img8.webp</image:loc></image:image>
+    <image:image><image:loc>https://shaillystattoo.com/images/img5.webp</image:loc></image:image>
+    <image:image><image:loc>https://shaillystattoo.com/images/img7.webp</image:loc></image:image>
+    <image:image><image:loc>https://shaillystattoo.com/images/img6.webp</image:loc></image:image>
+    <image:image><image:loc>https://shaillystattoo.com/images/img9.webp</image:loc></image:image>
+    <image:image><image:loc>https://shaillystattoo.com/images/img4.webp</image:loc></image:image>
+    <image:image><image:loc>https://shaillystattoo.com/images/img1-optimized.webp</image:loc></image:image>
+    <image:image><image:loc>https://shaillystattoo.com/images/img11-optimized.webp</image:loc></image:image>
+    <image:image><image:loc>https://shaillystattoo.com/images/img14-optimized.webp</image:loc></image:image>
+    <image:image><image:loc>https://shaillystattoo.com/images/img17-optimized.webp</image:loc></image:image>
+    <image:image><image:loc>https://shaillystattoo.com/images/img18-optimized.webp</image:loc></image:image>
+    <image:image><image:loc>https://shaillystattoo.com/images/img20-optimized.webp</image:loc></image:image>
+    <image:image><image:loc>https://shaillystattoo.com/images/img21-optimized.webp</image:loc></image:image>
+    <image:image><image:loc>https://shaillystattoo.com/images/img22-optimized.webp</image:loc></image:image>
+    <image:image><image:loc>https://shaillystattoo.com/images/img25-optimized.webp</image:loc></image:image>
+    <image:image><image:loc>https://shaillystattoo.com/images/img26-optimized.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://shaillystattoo.com/privacy-policy.html</loc>
+    <lastmod>2026-07-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

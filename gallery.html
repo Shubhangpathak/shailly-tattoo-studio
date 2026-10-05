@@ -1,430 +1,218 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery - Shailly's Tattoo Studio</title>
-  <link rel="stylesheet" href="/src/styles/gallerypage.css">
-  <style>
-    /* .gallery-item img {
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-    
-    .gallery-item img:hover {
-      transform: scale(1.03);
-    }
-    
-    .home-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 3rem auto 1rem;
-      padding: 0.8rem 1.5rem;
-      background-color: #000;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      font-weight: 500;
-      transition: background-color 0.3s;
-      text-decoration: none;
-      width: fit-content;
-      border-radius: 4px;
-    }
-    
-    .home-button:hover {
-      background-color: #333;
-    }
-    
-    .home-button img {
-      width: 20px;
-      height: 20px;
-      margin-right: 8px;
-      transform: rotate(180deg);
-    }
-    
-    @media (max-width: 768px) {
-      .preview-modal-content {
-        width: 95%;
-        height: 80%;
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/src/styles/tokens.css" />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/layout.css" />
+    <link rel="stylesheet" href="/src/styles/components.css" />
+    <link rel="stylesheet" href="/src/styles/animations/scroll-reveal.css" />
+    <link rel="stylesheet" href="/src/styles/pages/gallery.css" />
+    <noscript><style>.deferred-image { display: none; }</style></noscript>
+    <title>Tattoo Gallery in Mumbai & Raipur | Shailly's Tattoo Studio</title>
+    <meta
+      name="description"
+      content="Explore custom fine-line, portrait, traditional, and contemporary tattoos created by Shailly's Tattoo Studio in Mumbai and Raipur."
+    />
+    <meta name="theme-color" content="#f6f3ec" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://shaillystattoo.com/gallery.html" />
+    <link rel="icon" href="/favicon-96.png" type="image/png" sizes="96x96" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="preload"
+      href="/fonts/NeueMontreal-Regular.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:site_name" content="Shailly's Tattoo Studio" />
+    <meta property="og:title" content="Tattoo Gallery | Shailly's Tattoo Studio" />
+    <meta property="og:description" content="A selection of custom tattoos created in Mumbai and Raipur." />
+    <meta property="og:url" content="https://shaillystattoo.com/gallery.html" />
+    <meta property="og:image" content="https://shaillystattoo.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:alt" content="Shailly's Tattoo Studio custom tattoo gallery" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tattoo Gallery | Shailly's Tattoo Studio" />
+    <meta name="twitter:description" content="A selection of custom tattoos created in Mumbai and Raipur." />
+    <meta name="twitter:image" content="https://shaillystattoo.com/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Shailly's Tattoo Studio custom tattoo gallery" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://shaillystattoo.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Gallery",
+            "item": "https://shaillystattoo.com/gallery.html"
+          }
+        ]
       }
-      
-      .preview-nav {
-        width: 40px;
-        height: 40px;
-      }
-      
-      .prev-btn {
-        left: 10px;
-      }
-      
-      .next-btn {
-        right: 10px;
-      }
-    } */
-  </style>
-</head>
-<body>
-  <nav>
-      <div class="logo-text"><img src="/images/logo.svg" alt="logo"></div>
-      <div class="menu">
-        <a href="index.html">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="index.html#about">About</a>
-        <a href="index.html#findus">Location</a>
-        <a id="openBookingModal" class="clr-light">Book Now</a>
+    </script>
+  </head>
+  <body data-page="gallery">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div data-site-header></div>
+
+    <main id="main-content">
+      <header class="page-hero section-shell">
+        <nav class="breadcrumbs hero-reveal" aria-label="Breadcrumb">
+          <ol><li><a href="/">Home</a></li><li aria-current="page">Gallery</li></ol>
+        </nav>
+        <div class="page-hero__grid">
+          <div><p class="eyebrow hero-reveal">Selected portfolio</p><h1 class="hero-reveal">Work that lives<br /><em>with you.</em></h1></div>
+          <p class="hero-reveal">Explore custom pieces created across our Mumbai and Raipur studios—from quiet fine lines to expressive, large-scale work.</p>
         </div>
-      <div class="menu-bar" id="menu-toggle"><img src="/icons/bx-menu.svg" alt=""></div>
-    </nav>
+      </header>
 
-    <!-- Mobile menu overlay -->
-    <div class="mobile-menu-overlay" id="mobile-menu">
-      <div class="mobile-menu-content">
-        <div class="mobile-menu-links">
-          <a href="index.html">Home</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="index.html#about">About</a>
-          <a href="index.html#price">Pricing</a>
-          <a href="index.html#findus">Locations</a>
-          <a id="openBookingModal" class="get-in-touch-mobile">Book Now</a>
+      <section class="gallery-page section-shell" aria-labelledby="gallery-grid-title">
+        <h2 class="sr-only" id="gallery-grid-title">Tattoo portfolio</h2>
+        <div class="filter-bar" aria-label="Filter tattoos by style" data-gallery-filters>
+          <button class="filter-chip" type="button" data-filter="all" aria-pressed="true">All work</button>
+          <button class="filter-chip" type="button" data-filter="minimal" aria-pressed="false">Minimal</button>
+          <button class="filter-chip" type="button" data-filter="portraits" aria-pressed="false">Portraits</button>
+          <button class="filter-chip" type="button" data-filter="traditional" aria-pressed="false">Traditional</button>
+          <button class="filter-chip" type="button" data-filter="colour" aria-pressed="false">Colour</button>
         </div>
-      </div>
-    </div>
-  
-  <section class="gallery-page">
-    <!-- <div class="search-container">
-      <input type="text" id="gallery-search" placeholder="Search designs...">
-      <button class="search-btn">Search</button>
-    </div> -->
-    
-    <div class="gallery-filter">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="minimal">Minimal</button>
-      <!-- <button class="filter-btn" data-filter="colorful">Colorful</button> -->
-      <button class="filter-btn" data-filter="portraits">Portraits</button>
-      <button class="filter-btn" data-filter="traditional">Traditional</button>
-    </div>
-    
-    <div class="gallery-grid">
-      <div class="gallery-item" data-category="minimal">
-        <img src="/images/img1.png" alt="Tattoo Design" class="gallery-img">
-      </div>
-      <div class="gallery-item" data-category="colorful">
-        <img src="/images/img2.webp" alt="Tattoo Design" class="gallery-img">
-      </div>
-      <div class="gallery-item" data-category="traditional">
-        <img src="/images/img4.webp" alt="Tattoo Design" class="gallery-img">
-      </div>
-      <div class="gallery-item" data-category="portraits">
-        <img src="/images/img5.webp" alt="Tattoo Design" class="gallery-img">
-      </div>
-      <div class="gallery-item" data-category="minimal">
-        <img src="/images/img6.webp" alt="Tattoo Design" class="gallery-img">
-      </div>
-      <div class="gallery-item" data-category="colorful">
-        <img src="/images/img7.webp" alt="Tattoo Design" class="gallery-img">
-      </div>
-      <div class="gallery-item" data-category="portraits">
-        <img src="/images/img8.webp" alt="Tattoo Design" class="gallery-img">
-      </div>
-      <div class="gallery-item" data-category="traditional">
-        <img src="/images/img9.webp" alt="Tattoo Design" class="gallery-img">
-      </div>
-      <div class="gallery-item" data-category="minimal">
-        <img src="/images/img10.png" alt="Tattoo Design" class="gallery-img">
-      </div>
-      <div class="gallery-item" data-category="colorful">
-        <img src="/images/img11.png" alt="Tattoo Design" class="gallery-img">
-      </div>
-      <div class="gallery-item" data-category="traditional">
-        <img src="/images/new.webp" alt="Tattoo Design" class="gallery-img">
-      </div>
-      <div class="gallery-item" data-category="minimal">
-        <img src="/images/new2.webp" alt="Tattoo Design" class="gallery-img">
-      </div>
-      <div class="gallery-item" data-category="minimal">
-        <img src="/images/img13.png" alt="Tattoo Design" class="gallery-img">
-      </div>
-      <div class="gallery-item" data-category="minimal">
-        <img src="/images/img14.png" alt="Tattoo Design" class="gallery-img">
-      </div>
-      <div class="gallery-item" data-category="minimal">
-        <img src="/images/img15.png" alt="Tattoo Design" class="gallery-img">
-      </div>
-      <div class="gallery-item" data-category="minimal">
-        <img src="/images/img16.png" alt="Tattoo Design" class="gallery-img">
-      </div>
-    </div>
-    
-    <!-- Home Button -->
-    <a href="index.html" class="home-button">
-      <img src="/icons/bx-chevron-right.svg" alt="Back">
-      Back to Home
-    </a>
-  </section>
-  
-  <!-- Image Preview Modal -->
-  <div class="gallery-preview-modal" id="gallery-preview">
-    <div class="preview-modal-content">
-      <span class="close-preview">&times;</span>
-      <div class="preview-image-container">
-        <img id="preview-image" src="" alt="Tattoo Preview">
-        <button class="preview-nav prev-btn">
-          <img src="/icons/arrow.svg" alt="Previous">
-        </button>
-        <button class="preview-nav next-btn">
-          <img src="/icons/arrow.svg" alt="Next">
-        </button>
-      </div>
-    </div>
-  </div>
 
-  <div id="bookingModal" class="modal-backdrop">
-    <div class="modal-content">
-        <span class="close-modal-btn" id="closeBookingModal">&times;</span>
-        <form id="tattooBookingForm" class="booking-form">
-            <h2>Book Your Tattoo Appointment</h2>
+        <div class="gallery-grid" data-gallery-grid aria-live="polite">
+          <button class="gallery-item scroll-reveal" type="button" data-category="portraits" data-gallery-item data-caption="Personal script · Portraits" aria-label="Open personal script tattoo preview">
+            <img class="deferred-image" data-src="/images/new.webp" alt="Client with a fine-line script tattoo near her collarbone" width="1080" height="1350" decoding="async" />
+            <noscript><img src="/images/new.webp" alt="Client with a fine-line script tattoo near her collarbone" width="1080" height="1350" decoding="async" /></noscript>
+            <span><strong>Personal script</strong><small>Portraits</small></span>
+          </button>
+          <button class="gallery-item scroll-reveal" type="button" data-category="traditional" data-gallery-item data-caption="Blackwork sleeve · Traditional" aria-label="Open blackwork sleeve tattoo preview">
+            <img class="deferred-image" data-src="/images/new2.webp" alt="Large blackwork sleeve and shoulder tattoo" width="1080" height="1350" decoding="async" />
+            <noscript><img src="/images/new2.webp" alt="Large blackwork sleeve and shoulder tattoo" width="1080" height="1350" decoding="async" /></noscript>
+            <span><strong>Blackwork sleeve</strong><small>Traditional</small></span>
+          </button>
+          <button class="gallery-item scroll-reveal" type="button" data-category="traditional" data-gallery-item data-caption="Lion and time · Traditional" aria-label="Open lion and clock tattoo preview">
+            <img class="deferred-image" data-src="/images/img2.webp" alt="Lion, clock, and forest tattoo on a forearm" width="1080" height="1350" decoding="async" />
+            <noscript><img src="/images/img2.webp" alt="Lion, clock, and forest tattoo on a forearm" width="1080" height="1350" /></noscript>
+            <span><strong>Lion and time</strong><small>Traditional</small></span>
+          </button>
+          <button class="gallery-item scroll-reveal" type="button" data-category="minimal" data-gallery-item data-caption="Moon garden · Minimal" aria-label="Open moon and lotus tattoo preview">
+            <img class="deferred-image" data-src="/images/img8.webp" alt="Moon, lotus, and butterfly tattoo on an arm" width="1080" height="1350" decoding="async" />
+            <noscript><img src="/images/img8.webp" alt="Moon, lotus, and butterfly tattoo on an arm" width="1080" height="1350" /></noscript>
+            <span><strong>Moon garden</strong><small>Minimal</small></span>
+          </button>
+          <button class="gallery-item scroll-reveal" type="button" data-category="traditional" data-gallery-item data-caption="Geometric symbols · Traditional" aria-label="Open geometric symbols tattoo preview">
+            <img class="deferred-image" data-src="/images/img5.webp" alt="Geometric chakra and bird tattoo on a forearm" width="1080" height="1350" decoding="async" />
+            <noscript><img src="/images/img5.webp" alt="Geometric chakra and bird tattoo on a forearm" width="1080" height="1350" /></noscript>
+            <span><strong>Geometric symbols</strong><small>Traditional</small></span>
+          </button>
+          <button class="gallery-item scroll-reveal" type="button" data-category="minimal" data-gallery-item data-caption="Custom lettering · Minimal" aria-label="Open custom lettering tattoo preview">
+            <img class="deferred-image" data-src="/images/img7.webp" alt="Minimal custom lettering tattoo on a forearm" width="1080" height="1350" decoding="async" />
+            <noscript><img src="/images/img7.webp" alt="Minimal custom lettering tattoo on a forearm" width="1080" height="1350" /></noscript>
+            <span><strong>Custom lettering</strong><small>Minimal</small></span>
+          </button>
+          <button class="gallery-item scroll-reveal" type="button" data-category="colour" data-gallery-item data-caption="Red butterflies · Colour" aria-label="Open red butterfly tattoo preview">
+            <img class="deferred-image" data-src="/images/img6.webp" alt="Small red butterfly tattoos on an upper arm" width="1080" height="1350" decoding="async" />
+            <noscript><img src="/images/img6.webp" alt="Small red butterfly tattoos on an upper arm" width="1080" height="1350" /></noscript>
+            <span><strong>Red butterflies</strong><small>Colour</small></span>
+          </button>
+          <button class="gallery-item scroll-reveal" type="button" data-category="colour" data-gallery-item data-caption="Infinity feather · Colour" aria-label="Open infinity and feather tattoo preview">
+            <img class="deferred-image" data-src="/images/img9.webp" alt="Infinity and feather tattoo with a red heart" width="1080" height="1350" decoding="async" />
+            <noscript><img src="/images/img9.webp" alt="Infinity and feather tattoo with a red heart" width="1080" height="1350" /></noscript>
+            <span><strong>Infinity feather</strong><small>Colour</small></span>
+          </button>
+          <button class="gallery-item scroll-reveal" type="button" data-category="minimal" data-gallery-item data-caption="Fine-line wildflowers · Minimal" aria-label="Open fine-line flower tattoo preview">
+            <img class="deferred-image" data-src="/images/img4.webp" alt="Small fine-line wildflower tattoo on a forearm" width="1080" height="1350" decoding="async" />
+            <noscript><img src="/images/img4.webp" alt="Small fine-line wildflower tattoo on a forearm" width="1080" height="1350" /></noscript>
+            <span><strong>Fine-line wildflowers</strong><small>Minimal</small></span>
+          </button>
+          <button class="gallery-item scroll-reveal" type="button" data-category="minimal" data-gallery-item data-caption="Geometric eye · Minimal" aria-label="Open geometric eye tattoo preview">
+            <img class="deferred-image" data-src="/images/img1-optimized.webp" alt="Detailed sacred geometry tattoo" width="1080" height="1350" decoding="async" />
+            <noscript><img src="/images/img1-optimized.webp" alt="Detailed sacred geometry tattoo" width="1080" height="1350" /></noscript>
+            <span><strong>Geometric eye</strong><small>Minimal</small></span>
+          </button>
+          <button class="gallery-item scroll-reveal" type="button" data-category="minimal" data-gallery-item data-caption="Hamsa symbol · Minimal" aria-label="Open hamsa symbol tattoo preview">
+            <img class="deferred-image" data-src="/images/img11-optimized.webp" alt="Small hamsa symbol tattoo on a wrist" width="1080" height="1350" decoding="async" />
+            <noscript><img src="/images/img11-optimized.webp" alt="Small hamsa symbol tattoo on a wrist" width="1080" height="1350" /></noscript>
+            <span><strong>Hamsa symbol</strong><small>Minimal</small></span>
+          </button>
+          <button class="gallery-item scroll-reveal" type="button" data-category="minimal" data-gallery-item data-caption="Lotus line · Minimal" aria-label="Open lotus line tattoo preview">
+            <img class="deferred-image" data-src="/images/img14-optimized.webp" alt="Small fine-line lotus tattoo on an arm" width="1080" height="1350" decoding="async" />
+            <noscript><img src="/images/img14-optimized.webp" alt="Small fine-line lotus tattoo on an arm" width="1080" height="1350" /></noscript>
+            <span><strong>Lotus line</strong><small>Minimal</small></span>
+          </button>
+          <button class="gallery-item scroll-reveal" type="button" data-category="traditional" data-gallery-item data-caption="Shiva portrait · Traditional" aria-label="Open Shiva portrait tattoo preview">
+            <img class="deferred-image" data-src="/images/img17-optimized.webp" alt="Detailed Shiva portrait and Sanskrit script tattoo on an upper arm" width="1200" height="1500" decoding="async" />
+            <noscript><img src="/images/img17-optimized.webp" alt="Detailed Shiva portrait and Sanskrit script tattoo on an upper arm" width="1200" height="1500" /></noscript>
+            <span><strong>Shiva portrait</strong><small>Traditional</small></span>
+          </button>
+          <button class="gallery-item scroll-reveal" type="button" data-category="traditional" data-gallery-item data-caption="In the making · Traditional" aria-label="Open tattoo process preview">
+            <img class="deferred-image" data-src="/images/img18-optimized.webp" alt="Tattoo artist working on a custom upper-arm design" width="704" height="1472" decoding="async" />
+            <noscript><img src="/images/img18-optimized.webp" alt="Tattoo artist working on a custom upper-arm design" width="704" height="1472" /></noscript>
+            <span><strong>In the making</strong><small>Traditional</small></span>
+          </button>
+          <button class="gallery-item scroll-reveal" type="button" data-category="traditional" data-gallery-item data-caption="Shiva study · Traditional" aria-label="Open Shiva study tattoo preview">
+            <img class="deferred-image" data-src="/images/img20-optimized.webp" alt="Shiva portrait and Sanskrit script tattoo across an upper arm" width="1179" height="1010" decoding="async" />
+            <noscript><img src="/images/img20-optimized.webp" alt="Shiva portrait and Sanskrit script tattoo across an upper arm" width="1179" height="1010" /></noscript>
+            <span><strong>Shiva study</strong><small>Traditional</small></span>
+          </button>
+          <button class="gallery-item scroll-reveal" type="button" data-category="minimal" data-gallery-item data-caption="Sun symbol · Minimal" aria-label="Open sun symbol tattoo preview">
+            <img class="deferred-image" data-src="/images/img21-optimized.webp" alt="Small fine-line sun symbol tattoo on a shoulder" width="1200" height="1500" decoding="async" />
+            <noscript><img src="/images/img21-optimized.webp" alt="Small fine-line sun symbol tattoo on a shoulder" width="1200" height="1500" /></noscript>
+            <span><strong>Sun symbol</strong><small>Minimal</small></span>
+          </button>
+          <button class="gallery-item scroll-reveal" type="button" data-category="colour" data-gallery-item data-caption="Name and rose · Colour" aria-label="Open name and rose tattoo preview">
+            <img class="deferred-image" data-src="/images/img22-optimized.webp" alt="Fine-line name tattoo finished with a small red rose" width="1200" height="1500" decoding="async" />
+            <noscript><img src="/images/img22-optimized.webp" alt="Fine-line name tattoo finished with a small red rose" width="1200" height="1500" /></noscript>
+            <span><strong>Name and rose</strong><small>Colour</small></span>
+          </button>
+          <button class="gallery-item scroll-reveal" type="button" data-category="minimal" data-gallery-item data-caption="Abstract line · Minimal" aria-label="Open abstract line tattoo preview">
+            <img class="deferred-image" data-src="/images/img25-optimized.webp" alt="Small abstract fine-line tattoo on an inner forearm" width="1200" height="1500" decoding="async" />
+            <noscript><img src="/images/img25-optimized.webp" alt="Small abstract fine-line tattoo on an inner forearm" width="1200" height="1500" /></noscript>
+            <span><strong>Abstract line</strong><small>Minimal</small></span>
+          </button>
+          <button class="gallery-item scroll-reveal" type="button" data-category="colour" data-gallery-item data-caption="Hindi lettering · Colour" aria-label="Open Hindi lettering tattoo preview">
+            <img class="deferred-image" data-src="/images/img26-optimized.webp" alt="Colour-accented Hindi lettering tattoo on a lower leg" width="1200" height="1500" decoding="async" />
+            <noscript><img src="/images/img26-optimized.webp" alt="Colour-accented Hindi lettering tattoo on a lower leg" width="1200" height="1500" /></noscript>
+            <span><strong>Hindi lettering</strong><small>Colour</small></span>
+          </button>
+        </div>
+        <p class="gallery-empty" data-gallery-empty hidden>No work is available in this category yet.</p>
+      </section>
 
-            <input type="hidden" name="access_key" value="537eb431-be83-4838-ab49-5b346fba20a0">
+      <section class="gallery-cta section-shell">
+        <div><p class="eyebrow scroll-reveal">Have something in mind?</p><h2 class="scroll-reveal">Let’s turn the reference<br /><em>into something yours.</em></h2></div>
+        <button class="button button--light scroll-reveal" type="button" data-booking-trigger>Start a consultation</button>
+      </section>
+    </main>
 
-            <div class="form-group">
-                <label for="fullName">Full Name <span style="color:red;">*</span></label>
-                <input type="text" id="fullName" name="fullName" required>
-            </div>
+    <dialog class="lightbox" data-lightbox aria-labelledby="lightbox-caption">
+      <div class="lightbox__topbar">
+        <p id="lightbox-caption" data-lightbox-caption></p>
+        <button class="icon-button icon-button--light" type="button" data-lightbox-close aria-label="Close image preview">×</button>
+      </div>
+      <div class="lightbox__media"><img data-lightbox-image src="" alt="" /></div>
+      <div class="lightbox__controls">
+        <button class="button button--ghost-light" type="button" data-lightbox-previous>← Previous</button>
+        <span data-lightbox-position aria-live="polite"></span>
+        <button class="button button--ghost-light" type="button" data-lightbox-next>Next →</button>
+      </div>
+    </dialog>
 
-            <div class="form-group">
-                <label for="phone">Phone Number <span style="color:red;">*</span></label>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" title="Please enter a valid phone number (10-15 digits)" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email Address <span style="color:red;">*</span></label>
-                <input type="email" id="email" name="email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="location">Choose Location <span style="color:red;">*</span></label>
-                <select id="location" name="location" required>
-                    <option value="" disabled selected>Select a location</option>
-                    <option value="raipur">Raipur</option>
-                    <option value="mumbai">Mumbai</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="preferredDate">Preferred Date <span style="color:red;">*</span></label>
-                <input type="date" id="preferredDate" name="preferredDate" required>
-            </div>
-
-            <!-- <div class="form-group">
-                <label for="preferredTime">Preferred Time Slot <span style="color:red;">*</span></label>
-                <input type="time" id="preferredTime" name="preferredTime" required>
-            </div> -->
-
-            <div class="form-group">
-                <label for="tattooDescription">Tattoo Description/Idea <span class="optional-label">(Optional)</span></label>
-                <textarea id="tattooDescription" name="tattooDescription" rows="4"></textarea>
-            </div>
-
-            <button type="submit" class="submit-btn">Request Appointment</button>
-        </form>
-    </div>
-</div>
-  <script type="module" src="/src/main.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Get all gallery images
-      const galleryImages = document.querySelectorAll('.gallery-img');
-      const previewModal = document.getElementById('gallery-preview');
-      const modalImg = document.getElementById('preview-image');
-      const closeBtn = document.querySelector('.close-preview');
-      const prevBtn = document.querySelector('.prev-btn');
-      const nextBtn = document.querySelector('.next-btn');
-      let currentImageIndex = 0;
-      
-      // Booking Modal Functionality
-      const bookingModal = document.getElementById('bookingModal');
-      const openBookingButtons = document.querySelectorAll('#openBookingModal');
-      const closeBookingButton = document.querySelector('.close-modal-btn');
-      const bookingForm = document.getElementById('tattooBookingForm');
-      
-      // Function to open image preview modal
-      function openPreviewModal(index) {
-        const images = Array.from(galleryImages);
-        currentImageIndex = index;
-        modalImg.src = images[currentImageIndex].src;
-        previewModal.style.display = 'block';
-        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
-        
-        // Update navigation buttons visibility
-        updateNavButtons();
-      }
-      
-      // Function to close image preview modal
-      function closePreviewModal() {
-        previewModal.style.display = 'none';
-        document.body.style.overflow = ''; // Restore scrolling
-      }
-      
-      // Function to open booking modal
-      function openBookingModal() {
-        if (bookingModal) {
-          bookingModal.style.display = 'block';
-          document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
-        }
-      }
-      
-      // Function to close booking modal
-      function closeBookingModal() {
-        if (bookingModal) {
-          bookingModal.style.display = 'none';
-          document.body.style.overflow = ''; // Restore scrolling
-        }
-      }
-      
-      // Function to navigate to previous image
-      function prevImage() {
-        const images = Array.from(galleryImages);
-        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-        modalImg.src = images[currentImageIndex].src;
-        updateNavButtons();
-      }
-      
-      // Function to navigate to next image
-      function nextImage() {
-        const images = Array.from(galleryImages);
-        currentImageIndex = (currentImageIndex + 1) % images.length;
-        modalImg.src = images[currentImageIndex].src;
-        updateNavButtons();
-      }
-      
-      // Handle booking form submission
-      if (bookingForm) {
-        bookingForm.addEventListener('submit', function(event) {
-          event.preventDefault(); // Prevent default form submission
-          const formData = new FormData(bookingForm);
-          const object = {};
-          formData.forEach((value, key) => object[key] = value);
-          const json = JSON.stringify(object);
-
-          fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
-            },
-            body: json
-          })
-          .then(async (response) => {
-            let jsonResponse = await response.json();
-            if (response.status == 200) {
-              alert('Form submitted successfully!'); // Show success alert
-              bookingForm.reset(); // Reset the form
-              closeBookingModal(); // Close the modal
-            } else {
-              console.log(response);
-              alert('Something went wrong: ' + jsonResponse.message);
-            }
-          })
-          .catch(error => {
-            console.log(error);
-            alert('Something went wrong!');
-          });
-        });
-      }
-      
-      // Update navigation buttons visibility
-      function updateNavButtons() {
-        const images = Array.from(galleryImages);
-        prevBtn.style.display = images.length > 1 ? 'flex' : 'none';
-        nextBtn.style.display = images.length > 1 ? 'flex' : 'none';
-      }
-      
-      // Initialize mobile menu toggle functionality
-      const menuToggle = document.getElementById('menu-toggle');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const mobileMenuLinks = document.querySelectorAll('.mobile-menu-links a');
-      
-      // State
-      let isMobileNavOpen = false;
-      
-      // Toggle mobile menu
-      if (menuToggle) {
-        menuToggle.addEventListener('click', () => {
-          isMobileNavOpen = !isMobileNavOpen;
-          if (isMobileNavOpen) {
-            mobileMenu.classList.add('active');
-            document.body.style.overflow = 'hidden';
-          } else {
-            mobileMenu.classList.remove('active');
-            document.body.style.overflow = '';
-          }
-        });
-      }
-      
-      // Close menu when clicking on links
-      mobileMenuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          isMobileNavOpen = false;
-          mobileMenu.classList.remove('active');
-          document.body.style.overflow = '';
-        });
-      });
-      
-      // Add click event to all gallery images
-      galleryImages.forEach((img, index) => {
-        img.addEventListener('click', () => openPreviewModal(index));
-      });
-      
-      // Close preview modal when clicking close button
-      closeBtn.addEventListener('click', closePreviewModal);
-      
-      // Close preview modal when clicking outside the image
-      previewModal.addEventListener('click', function(event) {
-        if (event.target === previewModal) {
-          closePreviewModal();
-        }
-      });
-      
-      // Navigate to previous/next image
-      prevBtn.addEventListener('click', prevImage);
-      nextBtn.addEventListener('click', nextImage);
-      
-      // Add click event to all booking buttons
-      openBookingButtons.forEach(button => {
-        button.addEventListener('click', openBookingModal);
-      });
-      
-      // Close booking modal when clicking the close button
-      if (closeBookingButton) {
-        closeBookingButton.addEventListener('click', closeBookingModal);
-      }
-      
-      // Close booking modal when clicking outside the modal content
-      if (bookingModal) {
-        bookingModal.addEventListener('click', (event) => {
-          if (event.target === bookingModal) {
-            closeBookingModal();
-          }
-        });
-      }
-      
-      // Keyboard navigation
-      document.addEventListener('keydown', function(event) {
-        if (previewModal.style.display === 'block') {
-          if (event.key === 'ArrowLeft') {
-            prevImage();
-          } else if (event.key === 'ArrowRight') {
-            nextImage();
-          } else if (event.key === 'Escape') {
-            closePreviewModal();
-          }
-        } else if (bookingModal && bookingModal.style.display === 'block' && event.key === 'Escape') {
-          closeBookingModal();
-        }
-      });
-    });
-  </script>
-</body>
+    <div data-site-footer></div>
+    <div data-booking-dialog></div>
+    <script type="module" src="/src/pages/gallery.js"></script>
+  </body>
 </html>
