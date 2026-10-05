@@ -132,6 +132,12 @@ body[data-page='gallery'] .page-hero__grid > p {
   text-align: center;
 }
 
+.gallery-status {
+  padding: 3rem 1rem;
+  color: var(--muted);
+  text-align: center;
+}
+
 .gallery-cta {
   display: flex;
   align-items: flex-end;

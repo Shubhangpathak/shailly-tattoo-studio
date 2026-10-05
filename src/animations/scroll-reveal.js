@@ -1,6 +1,7 @@
 const EASING = 'cubic-bezier(.16, 1, .3, 1)';
+const registeredElements = new WeakSet();
 
-export function initializeScrollReveals() {
+export function initializeScrollReveals(root = document) {
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   if (motion.matches || !('IntersectionObserver' in window)) return;
   const animations = new Set();
@@ -33,11 +34,15 @@ export function initializeScrollReveals() {
       elements.forEach((element, index) => reveal(element, index * 70));
     });
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-  document.querySelectorAll('.scroll-reveal').forEach(element => {
+  root.querySelectorAll('.scroll-reveal').forEach(element => {
+    if (registeredElements.has(element)) return;
+    registeredElements.add(element);
     element.classList.add('scroll-reveal--pending');
     observer.observe(element);
   });
-  document.querySelectorAll('.hero-reveal').forEach((element, index) => {
+  root.querySelectorAll('.hero-reveal').forEach((element, index) => {
+    if (registeredElements.has(element)) return;
+    registeredElements.add(element);
     reveal(element, Math.min(index * 35, 245), 5, 520, 14);
   });
   motion.addEventListener('change', () => {

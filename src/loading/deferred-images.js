@@ -1,5 +1,8 @@
-export function initializeDeferredImages() {
-  const images = document.querySelectorAll('.deferred-image[data-src]');
+const registeredImages = new WeakSet();
+
+export function initializeDeferredImages(root = document) {
+  const images = [...root.querySelectorAll('.deferred-image[data-src]')].filter(image => !registeredImages.has(image));
+  images.forEach(image => registeredImages.add(image));
   const load = image => {
     image.loading = 'eager';
     image.decoding = 'async';

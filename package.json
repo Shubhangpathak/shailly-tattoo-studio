@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:hostinger": "node scripts/build-hostinger.mjs",
+    "test:gallery": "node tests/gallery.integration.mjs",
     "preview": "vite preview",
     "assets": "node scripts/generate-assets.mjs"
   },

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Gallery admin | Shaillys Tattoo Studio</title>
+    <link rel="icon" href="/favicon-circle.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/src/styles/tokens.css" />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/components.css" />
+    <link rel="stylesheet" href="/src/admin/admin.css" />
+  </head>
+  <body class="admin-page">
+    <header class="admin-header">
+      <a href="/" aria-label="Shaillys Tattoo Studio home"><img src="/brand-logo.webp" alt="" width="136" height="57" /></a>
+      <span class="admin-header__label">Gallery manager</span>
+      <nav aria-label="Admin navigation"><a href="/gallery.html" target="_blank" rel="noopener">View gallery ↗</a><a href="/">Back to website</a></nav>
+    </header>
+    <main class="admin-shell">
+      <section class="admin-intro">
+        <div><p class="eyebrow">Your studio, in pictures</p><h1>Your gallery.</h1><p>Add new work, organise tags, and keep your portfolio up to date.</p></div>
+        <button class="button button--primary" type="button" data-add disabled>＋ Add photos</button>
+      </section>
+      <p class="admin-message" data-message role="status" aria-live="polite" hidden></p>
+      <section class="admin-setup" data-setup hidden>
+        <div><p class="eyebrow">Start with your current work</p><h2>Bring in the existing collection.</h2><p>Import the 19 photos already on your gallery, with their titles and tags. Your homepage images stay separate.</p></div>
+        <button class="button button--primary" type="button" data-initialize>Import 19 photos</button>
+      </section>
+      <section class="admin-collection" aria-label="Manage gallery photos">
+        <div class="admin-toolbar">
+          <div class="admin-tabs" data-filters aria-label="Filter photos"></div>
+          <label class="admin-search"><span class="sr-only">Search photo titles</span><input type="search" data-search placeholder="Search your photos…" /></label>
+        </div>
+        <div class="admin-collection__meta"><p data-count>Loading collection…</p><button class="admin-text-button" type="button" data-refresh>Refresh</button></div>
+        <div class="admin-grid" data-grid aria-busy="true"></div>
+        <p class="admin-empty" data-empty hidden></p>
+      </section>
+      <footer class="admin-note">Access is protected by Hostinger. Manage your username and password in hPanel.</footer>
+    </main>
+
+    <dialog class="admin-dialog" data-upload-dialog aria-labelledby="upload-title">
+      <header class="admin-dialog__header"><div><p class="eyebrow">Add to your portfolio</p><h2 id="upload-title">Upload photos.</h2></div><button class="icon-button" type="button" data-close aria-label="Close upload">×</button></header>
+      <div class="admin-dialog__body">
+        <label class="admin-dropzone" data-dropzone><strong>Choose photos or drop them here</strong><span>JPEG, PNG or WebP · Up to 10 MB each</span><input type="file" data-files accept="image/jpeg,image/png,image/webp" multiple /></label>
+        <p class="admin-hint">Choose tags for each photo. Photos without tags still appear in All work.</p>
+        <div class="admin-upload-list" data-upload-list></div>
+        <p class="admin-form-error" data-upload-error role="status"></p>
+      </div>
+      <footer class="admin-dialog__footer"><span data-upload-summary>No photos selected</span><button class="button button--primary" type="button" data-upload-submit disabled>Upload photos</button></footer>
+    </dialog>
+
+    <dialog class="admin-dialog admin-dialog--edit" data-edit-dialog aria-labelledby="edit-title">
+      <header class="admin-dialog__header"><h2 id="edit-title">Edit photo.</h2><button class="icon-button" type="button" data-close aria-label="Close photo editor">×</button></header>
+      <form data-edit-form class="admin-dialog__body">
+        <img class="admin-edit-preview" data-edit-preview alt="" />
+        <div class="field"><label for="photo-title">Photo title</label><input id="photo-title" name="title" maxlength="180" required /></div>
+        <div class="field"><label for="photo-alt">Image description</label><input id="photo-alt" name="alt" maxlength="400" /><small>A short description for people using screen readers.</small></div>
+        <div data-edit-tags></div>
+        <p class="admin-form-error" data-edit-error role="status"></p>
+        <button class="button button--primary" type="submit">Save changes</button>
+      </form>
+    </dialog>
+
+    <dialog class="admin-dialog admin-dialog--remove" data-remove-dialog aria-labelledby="remove-title">
+      <header class="admin-dialog__header"><h2 id="remove-title">Remove this photo?</h2><button class="icon-button" type="button" data-close aria-label="Cancel photo removal">×</button></header>
+      <div class="admin-dialog__body"><img class="admin-remove-preview" data-remove-preview alt="" /><strong data-remove-title></strong><p>This permanently deletes the photo from your gallery. This cannot be undone.</p><p class="admin-form-error" data-remove-error role="status"></p></div>
+      <footer class="admin-dialog__footer"><button class="button button--secondary" type="button" data-close>Keep photo</button><button class="button admin-danger" type="button" data-remove-confirm>Remove permanently</button></footer>
+    </dialog>
+    <script type="module" src="/src/admin/admin.js"></script>
+  </body>
+</html>

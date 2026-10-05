@@ -1,0 +1,230 @@
+[
+  {
+    "id": "seed-1",
+    "title": "Personal script",
+    "alt": "Client with a fine-line script tattoo near her collarbone",
+    "tags": [
+      "portraits"
+    ],
+    "src": "/images/new.webp",
+    "thumbnail": "/images/new.webp",
+    "width": 1080,
+    "height": 1350
+  },
+  {
+    "id": "seed-2",
+    "title": "Blackwork sleeve",
+    "alt": "Large blackwork sleeve and shoulder tattoo",
+    "tags": [
+      "traditional"
+    ],
+    "src": "/images/new2.webp",
+    "thumbnail": "/images/new2.webp",
+    "width": 1080,
+    "height": 1350
+  },
+  {
+    "id": "seed-3",
+    "title": "Lion and time",
+    "alt": "Lion, clock, and forest tattoo on a forearm",
+    "tags": [
+      "traditional"
+    ],
+    "src": "/images/img2.webp",
+    "thumbnail": "/images/img2.webp",
+    "width": 1080,
+    "height": 1350
+  },
+  {
+    "id": "seed-4",
+    "title": "Moon garden",
+    "alt": "Moon, lotus, and butterfly tattoo on an arm",
+    "tags": [
+      "minimal"
+    ],
+    "src": "/images/img8.webp",
+    "thumbnail": "/images/img8.webp",
+    "width": 1080,
+    "height": 1350
+  },
+  {
+    "id": "seed-5",
+    "title": "Geometric symbols",
+    "alt": "Geometric chakra and bird tattoo on a forearm",
+    "tags": [
+      "traditional"
+    ],
+    "src": "/images/img5.webp",
+    "thumbnail": "/images/img5.webp",
+    "width": 1080,
+    "height": 1350
+  },
+  {
+    "id": "seed-6",
+    "title": "Custom lettering",
+    "alt": "Minimal custom lettering tattoo on a forearm",
+    "tags": [
+      "minimal"
+    ],
+    "src": "/images/img7.webp",
+    "thumbnail": "/images/img7.webp",
+    "width": 1080,
+    "height": 1350
+  },
+  {
+    "id": "seed-7",
+    "title": "Red butterflies",
+    "alt": "Small red butterfly tattoos on an upper arm",
+    "tags": [
+      "colour"
+    ],
+    "src": "/images/img6.webp",
+    "thumbnail": "/images/img6.webp",
+    "width": 1080,
+    "height": 1350
+  },
+  {
+    "id": "seed-8",
+    "title": "Infinity feather",
+    "alt": "Infinity and feather tattoo with a red heart",
+    "tags": [
+      "colour"
+    ],
+    "src": "/images/img9.webp",
+    "thumbnail": "/images/img9.webp",
+    "width": 1080,
+    "height": 1350
+  },
+  {
+    "id": "seed-9",
+    "title": "Fine-line wildflowers",
+    "alt": "Small fine-line wildflower tattoo on a forearm",
+    "tags": [
+      "minimal"
+    ],
+    "src": "/images/img4.webp",
+    "thumbnail": "/images/img4.webp",
+    "width": 1080,
+    "height": 1350
+  },
+  {
+    "id": "seed-10",
+    "title": "Geometric eye",
+    "alt": "Detailed sacred geometry tattoo",
+    "tags": [
+      "minimal"
+    ],
+    "src": "/images/img1-optimized.webp",
+    "thumbnail": "/images/img1-optimized.webp",
+    "width": 1080,
+    "height": 1350
+  },
+  {
+    "id": "seed-11",
+    "title": "Hamsa symbol",
+    "alt": "Small hamsa symbol tattoo on a wrist",
+    "tags": [
+      "minimal"
+    ],
+    "src": "/images/img11-optimized.webp",
+    "thumbnail": "/images/img11-optimized.webp",
+    "width": 1080,
+    "height": 1350
+  },
+  {
+    "id": "seed-12",
+    "title": "Lotus line",
+    "alt": "Small fine-line lotus tattoo on an arm",
+    "tags": [
+      "minimal"
+    ],
+    "src": "/images/img14-optimized.webp",
+    "thumbnail": "/images/img14-optimized.webp",
+    "width": 1080,
+    "height": 1350
+  },
+  {
+    "id": "seed-13",
+    "title": "Shiva portrait",
+    "alt": "Detailed Shiva portrait and Sanskrit script tattoo on an upper arm",
+    "tags": [
+      "traditional"
+    ],
+    "src": "/images/img17-optimized.webp",
+    "thumbnail": "/images/img17-optimized.webp",
+    "width": 1200,
+    "height": 1500
+  },
+  {
+    "id": "seed-14",
+    "title": "In the making",
+    "alt": "Tattoo artist working on a custom upper-arm design",
+    "tags": [
+      "traditional"
+    ],
+    "src": "/images/img18-optimized.webp",
+    "thumbnail": "/images/img18-optimized.webp",
+    "width": 704,
+    "height": 1472
+  },
+  {
+    "id": "seed-15",
+    "title": "Shiva study",
+    "alt": "Shiva portrait and Sanskrit script tattoo across an upper arm",
+    "tags": [
+      "traditional"
+    ],
+    "src": "/images/img20-optimized.webp",
+    "thumbnail": "/images/img20-optimized.webp",
+    "width": 1179,
+    "height": 1010
+  },
+  {
+    "id": "seed-16",
+    "title": "Sun symbol",
+    "alt": "Small fine-line sun symbol tattoo on a shoulder",
+    "tags": [
+      "minimal"
+    ],
+    "src": "/images/img21-optimized.webp",
+    "thumbnail": "/images/img21-optimized.webp",
+    "width": 1200,
+    "height": 1500
+  },
+  {
+    "id": "seed-17",
+    "title": "Name and rose",
+    "alt": "Fine-line name tattoo finished with a small red rose",
+    "tags": [
+      "colour"
+    ],
+    "src": "/images/img22-optimized.webp",
+    "thumbnail": "/images/img22-optimized.webp",
+    "width": 1200,
+    "height": 1500
+  },
+  {
+    "id": "seed-18",
+    "title": "Abstract line",
+    "alt": "Small abstract fine-line tattoo on an inner forearm",
+    "tags": [
+      "minimal"
+    ],
+    "src": "/images/img25-optimized.webp",
+    "thumbnail": "/images/img25-optimized.webp",
+    "width": 1200,
+    "height": 1500
+  },
+  {
+    "id": "seed-19",
+    "title": "Hindi lettering",
+    "alt": "Colour-accented Hindi lettering tattoo on a lower leg",
+    "tags": [
+      "colour"
+    ],
+    "src": "/images/img26-optimized.webp",
+    "thumbnail": "/images/img26-optimized.webp",
+    "width": 1200,
+    "height": 1500
+  }
+]

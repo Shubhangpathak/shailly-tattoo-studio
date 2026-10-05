@@ -10,6 +10,9 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+tmp/
+hostinger-upload.zip
+hostinger-backend.zip
 *.local
 
 # Editor directories and files
